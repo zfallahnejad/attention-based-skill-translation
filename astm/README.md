@@ -1,5 +1,5 @@
 # Download Posts.xml
-**todo**: Find some place to upload compressed version of this 7-Gigabyte file 
+**TODO**: Find some place to upload this 7-Gigabyte 7z file which contains StackOverflow `Posts.xml` file
  
 # 0.0. Extract a sub collection of Stackoverflow posts based on a single tag
 For a single tag like `java`, we extract questions of stackoverflow which tagged by `java` along their answers.
