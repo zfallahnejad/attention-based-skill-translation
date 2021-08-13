@@ -1,0 +1,1 @@
+Put your `Posts.xml` in this directory
