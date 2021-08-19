@@ -1,5 +1,6 @@
 # Download Posts.xml
-**TODO**: Find some place to upload this 7-Gigabyte 7z file which contains StackOverflow `Posts.xml` file
+Here is the [link](https://drive.google.com/file/d/1OPBCLwgTCkzCzdpN_F4O5TuSCPtA3IdP/view?usp=sharing) to our dataset.
+Download this 7-Gigabyte 7z file which contains StackOverflow `Posts.xml` file and extract it inside `data` directory.
  
 # 0.0. Extract a sub collection of Stackoverflow posts based on a single tag
 For a single tag like `java`, we extract questions of stackoverflow which tagged by `java` along their answers.
