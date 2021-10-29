@@ -131,7 +131,6 @@ class Tag
 
 public class DeepTranslationFixer
 {
-
     int numberOfTranslations = 10;
     private Tag[] tagWord;
     private ArrayList<String> words;
@@ -146,9 +145,6 @@ public class DeepTranslationFixer
     {
         this.resultPath = resultPath;
     }
-    
-    
-    
 
     private void readFile() throws FileNotFoundException, IOException
     {
@@ -253,11 +249,14 @@ public class DeepTranslationFixer
                 for(int i = 0 ; i<numberOfTranslations; i++)
                 {
                     sb.append(res.get(i).getWord()).append(",");
+
+//                    sb.append(res.get(i).getWord()).append(":");
+//                    sb.append(res.get(i).getFinalProb()).append(",");
                 }
                 sb.setLength(sb.length() - 1);
                 sb.append("\n");
             }
-            PrintWriter pw = new PrintWriter("./data/final_deep_trans_method_"+methodNumber+".txt");
+            PrintWriter pw = new PrintWriter("./data/final_deep_trans_method_"+methodNumber+"_bias.txt");
             pw.print(sb.toString());
             pw.close();
         }

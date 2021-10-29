@@ -7,6 +7,9 @@ import java.io.IOException;
 import java.io.Writer;
 import java.nio.file.Paths;
 import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.IntPoint;
@@ -156,6 +159,21 @@ public class TopicModeling
         this.mainTag = mainTag;
     }
 
+    public static void main(String[] args) {
+        try
+        {
+            new TopicModeling("java").calculate();
+        }
+        catch (IOException ex)
+        {
+            Logger.getLogger(MainForm.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        catch (org.apache.lucene.queryparser.classic.ParseException ex)
+        {
+            Logger.getLogger(MainForm.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
     public void setup(int param) throws IOException
     {
         weight_file_path = "./data/TopicModeling/word_weight_" + param + ".txt";
@@ -231,7 +249,7 @@ public class TopicModeling
             {
                 total++;
             }
-                
+
             br.close();
             br = new BufferedReader(new FileReader((topic_file_path)));
             line = br.readLine();
@@ -252,8 +270,8 @@ public class TopicModeling
                     catch (NumberFormatException e)
                     {
                         topicsList.put(String.valueOf(i - 2), Double.parseDouble("0"));
-                        System.out.println("not a number"); 
-                    } 
+                        System.out.println("not a number");
+                    }
                 }
                 tl.setPostTopicsList(topicsList);
                 posts.put(lineArr[1], tl);
@@ -573,7 +591,8 @@ class Statistics
                 AvPrc += (double) relevant / (i + 1);
             }
         }
-        return AvPrc / (double) real_rankings.size();
+        // return AvPrc / (double) real_rankings.size();
+        return (real_rankings.size() == 0) ? 0.0 : (AvPrc / (double) real_rankings.size());
     }
 }
 

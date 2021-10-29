@@ -504,6 +504,10 @@ public class MainForm extends javax.swing.JFrame
         {
 //            new Balog().balog1("android",true,null);
             new Balog().balog1ForAllTags("java");
+//            new Balog().balog1ForAllTags("php");
+
+            //new Balog().balog1ForAllTagsVoteshare("java");
+            //new Balog().balog1ForAllTagsVoteshare("php");
         }
         catch (IOException ex)
         {
@@ -523,6 +527,14 @@ public class MainForm extends javax.swing.JFrame
             //new MutualInformation().getTermsAndProb("c#");
 //            new MutualInformation().saveAllTransaltionsByTagAndProb(5);
             new MutualInformation().saveAllTransaltionsByTag(10,"java");
+//            new MutualInformation().saveAllTransaltionsByTag(10,"php");
+//            new MutualInformation().saveAllTransaltionsByTag(100,"java");
+//            new MutualInformation().saveAllTransaltionsByTag(100,"php");
+
+//            new MutualInformation().saveAllTransaltionsByTagAndProb(100,"java");
+//            new MutualInformation().saveAllTransaltionsByTagAndProb(10,"java");
+//            new MutualInformation().saveAllTransaltionsByTagAndProb(100,"php");
+//            new MutualInformation().saveAllTransaltionsByTagAndProb(10,"php");
 
         }
         catch (IOException ex)
@@ -563,6 +575,10 @@ public class MainForm extends javax.swing.JFrame
         {
 //            new Balog().balog2("libgdx",true,null,10000,null,0.5);
             new Balog().balog2ForAllTags("java");
+//            new Balog().balog2ForAllTags("php");
+
+            //new Balog().balog2ForAllTagsVoteshare("java");
+            //new Balog().balog2ForAllTagsVoteshare("php");
         }
         catch (IOException ex)
         {
@@ -610,7 +626,8 @@ public class MainForm extends javax.swing.JFrame
     {//GEN-HEADEREND:event_jButton10ActionPerformed
         try
         {
-            new NGram("php").getNGram(1);
+            new NGram("java").getNGram(1);
+//            new NGram("php").getNGram(1);
         }
         catch (IOException ex)
         {
@@ -712,8 +729,8 @@ public class MainForm extends javax.swing.JFrame
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButton17ActionPerformed
     {//GEN-HEADEREND:event_jButton17ActionPerformed
-        DeepTranslationFixer dtf = new DeepTranslationFixer("./data/deep_result.txt");
-//        DeepTranslationFixer dtf = new DeepTranslationFixer("./data/deep_result_bias.txt");
+//        DeepTranslationFixer dtf = new DeepTranslationFixer("./data/deep_result.txt");
+        DeepTranslationFixer dtf = new DeepTranslationFixer("./data/deep_result_bias.txt");
         try
         {
             dtf.saveResult();
@@ -729,7 +746,385 @@ public class MainForm extends javax.swing.JFrame
         try
         {
             //args: number of words in trans, limit to tagged only, self translation, search answer only, use cluster
-            
+
+            // mi_binary_scoring_top10.txt   -> 0.5807489441138338
+            //new Blender("data/tag_mutuals.txt","java").blendOr(10,true,true,true,false,false);// no cluster, without voteshare
+            // mi_binary_scoring_top10-2.txt -> 0.37277056353202
+            //new Blender("data/tag_mutuals.txt","java").blendOr(10,false,true,true,false,false);// no cluster, without voteshare
+            // mi_binary_scoring_top10-3.txt -> 0.569005582792185
+            //new Blender("data/tag_mutuals.txt","java").blendOr(10,true,false,true,false,false);// no cluster, without voteshare
+            // mi_binary_scoring_top10-4.txt -> 0.3682408247355407
+            //new Blender("data/tag_mutuals.txt","java").blendOr(10,false,false,true,false,false);// no cluster, without voteshare
+            // mi_binary_scoring_top10-5.txt -> 0.49879995618770145
+            // new Blender("data/tag_mutuals.txt","java").blendOr(10,true,true,false,false,false);// no cluster, without voteshare
+            // mi_binary_scoring_top10-6.txt -> 0.4117894801578503
+            //new Blender("data/tag_mutuals.txt","java").blendOr(10,false,true,false,false,false);// no cluster, without voteshare
+            // mi_binary_scoring_top10-7.txt -> 0.48041425737172505
+            //new Blender("data/tag_mutuals.txt","java").blendOr(10,true,false,false,false,false);// no cluster, without voteshare
+            // mi_binary_scoring_top10-8.txt -> 0.39803309650646523
+            //new Blender("data/tag_mutuals.txt","java").blendOr(10,false,false,false,false,false);// no cluster, without voteshare
+
+            // mi_voteshare_scoring_top10.txt   -> 0.6663933076025431
+            //new Blender("data/tag_mutuals.txt","java").blendOr(10,true,true,true,false,true);// no cluster, with voteshare
+            // mi_voteshare_scoring_top10-2.txt -> 0.4386185858392145
+            //new Blender("data/tag_mutuals.txt","java").blendOr(10,false,true,true,false,true);// no cluster, with voteshare
+            // mi_voteshare_scoring_top10-3.txt -> 0.6537657975579309
+            //new Blender("data/tag_mutuals.txt","java").blendOr(10,true,false,true,false,true);// no cluster, with voteshare
+            // mi_voteshare_scoring_top10-4.txt -> 0.43047060409337734
+            //new Blender("data/tag_mutuals.txt","java").blendOr(10,false,false,true,false,true);// no cluster, with voteshare
+            // mi_voteshare_scoring_top10-5.txt -> 0.6323402821044497
+            //new Blender("data/tag_mutuals.txt","java").blendOr(10,true,true,false,false,true);// no cluster, with voteshare
+            // mi_voteshare_scoring_top10-6.txt -> 0.48886156060910024
+            //new Blender("data/tag_mutuals.txt","java").blendOr(10,false,true,false,false,true);// no cluster, with voteshare
+            // mi_voteshare_scoring_top10-7.txt -> 0.6116285923900453
+            //new Blender("data/tag_mutuals.txt","java").blendOr(10,true,false,false,false,true);// no cluster, with voteshare
+            // mi_voteshare_scoring_top10-8.txt -> 0.4754488195823731
+            //new Blender("data/tag_mutuals.txt","java").blendOr(10,false,false,false,false,true);// no cluster, with voteshare
+
+            // mi_binary_scoring_top10-hits1000.txt   -> 0.5807489441138338
+            //new Blender("data/tag_mutuals_hits1000.txt","java").blendOr(10,true,true,true,false,false);// no cluster, without voteshare
+
+            // mi_binary_scoring_top10-len500.txt   -> 0.5754626087936334
+            //new Blender("data/tag_mutuals_len500.txt","java").blendOr(10,true,true,true,false,false);// no cluster, without voteshare
+            // mi_binary_scoring_top10-len500-2.txt -> 0.36856571043211317
+            //new Blender("data/tag_mutuals_len500.txt","java").blendOr(10,false,true,true,false,false);// no cluster, without voteshare
+            // mi_binary_scoring_top10-len500-3.txt -> 0.562154325178573
+            //new Blender("data/tag_mutuals_len500.txt","java").blendOr(10,true,false,true,false,false);// no cluster, without voteshare
+            // mi_binary_scoring_top10-len500-4.txt -> 0.36107089925063235
+            //new Blender("data/tag_mutuals_len500.txt","java").blendOr(10,false,false,true,false,false);// no cluster, without voteshare
+            // mi_binary_scoring_top10-len500-5.txt -> 0.49650935594886325
+            //new Blender("data/tag_mutuals_len500.txt","java").blendOr(10,true,true,false,false,false);// no cluster, without voteshare
+            // mi_binary_scoring_top10-len500-6.txt ->
+            //new Blender("data/tag_mutuals_len500.txt","java").blendOr(10,false,true,false,false,false);// no cluster, without voteshare
+            // mi_binary_scoring_top10-len500-7.txt ->
+            //new Blender("data/tag_mutuals_len500.txt","java").blendOr(10,true,false,false,false,false);// no cluster, without voteshare
+            // mi_binary_scoring_top10-len500-8.txt ->
+            //new Blender("data/tag_mutuals_len500.txt","java").blendOr(10,false,false,false,false,false);// no cluster, without voteshare
+
+            // mi_voteshare_scoring_top10-len500.txt   -> 0.6593590164150998
+            //new Blender("data/tag_mutuals_len500.txt","java").blendOr(10,true,true,true,false,true);// no cluster, with voteshare
+            // mi_voteshare_scoring_top10-len500-2.txt ->
+            //new Blender("data/tag_mutuals_len500.txt","java").blendOr(10,false,true,true,false,true);// no cluster, with voteshare
+            // mi_voteshare_scoring_top10-len500-3.txt ->
+            //new Blender("data/tag_mutuals_len500.txt","java").blendOr(10,true,false,true,false,true);// no cluster, with voteshare
+            // mi_voteshare_scoring_top10-len500-4.txt ->
+            //new Blender("data/tag_mutuals_len500.txt","java").blendOr(10,false,false,true,false,true);// no cluster, with voteshare
+            // mi_voteshare_scoring_top10-len500-5.txt ->
+            //new Blender("data/tag_mutuals_len500.txt","java").blendOr(10,true,true,false,false,true);// no cluster, with voteshare
+            // mi_voteshare_scoring_top10-len500-6.txt ->
+            //new Blender("data/tag_mutuals_len500.txt","java").blendOr(10,false,true,false,false,true);// no cluster, with voteshare
+            // mi_voteshare_scoring_top10-len500-7.txt ->
+            //new Blender("data/tag_mutuals_len500.txt","java").blendOr(10,true,false,false,false,true);// no cluster, with voteshare
+            // mi_voteshare_scoring_top10-len500-8.txt ->
+            //new Blender("data/tag_mutuals_len500.txt","java").blendOr(10,false,false,false,false,true);// no cluster, with voteshare
+
+            // we_binary_scoring_top10.txt   -> 0.5467360029262462
+            //new Blender("data/final_deep_trans_method_2.txt","java").blendOr(10,true,true,true,false,false);// no cluster, without voteshare
+            // we_binary_scoring_top10-2.txt -> 0.35025491247860513
+            //new Blender("data/final_deep_trans_method_2.txt","java").blendOr(10,false,true,true,false,false);// no cluster, without voteshare
+            // we_binary_scoring_top10-3.txt -> 0.48488321605441975
+            //new Blender("data/final_deep_trans_method_2.txt","java").blendOr(10,true,false,true,false,false);// no cluster, without voteshare
+            // we_binary_scoring_top10-4.txt -> 0.33037362398965237
+            //new Blender("data/final_deep_trans_method_2.txt","java").blendOr(10,false,false,true,false,false);// no cluster, without voteshare
+            // we_binary_scoring_top10-5.txt -> 0.4617502748650504
+            //new Blender("data/final_deep_trans_method_2.txt","java").blendOr(10,true,true,false,false,false);// no cluster, without voteshare
+            // we_binary_scoring_top10-6.txt -> 0.3632034943563927
+            //new Blender("data/final_deep_trans_method_2.txt","java").blendOr(10,false,true,false,false,false);// no cluster, without voteshare
+            // we_binary_scoring_top10-7.txt -> 0.403513566984791
+            //new Blender("data/final_deep_trans_method_2.txt","java").blendOr(10,true,false,false,false,false);// no cluster, without voteshare
+            // we_binary_scoring_top10-8.txt -> 0.3367904286459653
+            //new Blender("data/final_deep_trans_method_2.txt","java").blendOr(10,false,false,false,false,false);// no cluster, without voteshare
+
+            // we_voteshare_scoring_top10.txt   -> 0.6264044633650543
+            //new Blender("data/final_deep_trans_method_2.txt","java").blendOr(10,true,true,true,false,true);// no cluster, with voteshare
+            // we_voteshare_scoring_top10-2.txt -> 0.3988618853013858
+            //new Blender("data/final_deep_trans_method_2.txt","java").blendOr(10,false,true,true,false,true);// no cluster, with voteshare
+            // we_voteshare_scoring_top10-3.txt -> 0.560235294811726
+            //new Blender("data/final_deep_trans_method_2.txt","java").blendOr(10,true,false,true,false,true);// no cluster, with voteshare
+            // we_voteshare_scoring_top10-4.txt -> 0.37571690112712025
+            //new Blender("data/final_deep_trans_method_2.txt","java").blendOr(10,false,false,true,false,true);// no cluster, with voteshare
+            // we_voteshare_scoring_top10-5.txt -> 0.5899291719706897
+            //new Blender("data/final_deep_trans_method_2.txt","java").blendOr(10,true,true,false,false,true);// no cluster, with voteshare
+            // we_voteshare_scoring_top10-6.txt -> 0.42381022124616274
+            //new Blender("data/final_deep_trans_method_2.txt","java").blendOr(10,false,true,false,false,true);// no cluster, with voteshare
+            // we_voteshare_scoring_top10-7.txt -> 0.5140931406699413
+            //new Blender("data/final_deep_trans_method_2.txt","java").blendOr(10,true,false,false,false,true);// no cluster, with voteshare
+            // we_voteshare_scoring_top10-8.txt -> 0.39542980343373896
+            //new Blender("data/final_deep_trans_method_2.txt","java").blendOr(10,false,false,false,false,true);// no cluster, with voteshare
+
+            // we_bias_binary_scoring_top10.txt   -> 0.5416573297481856
+            //new Blender("data/final_deep_trans_method_2_bias.txt","java").blendOr(10,true,true,true,false,false);// no cluster, without voteshare
+            // we_bias_binary_scoring_top10-2.txt -> 0.3480618462548123
+            //new Blender("data/final_deep_trans_method_2_bias.txt","java").blendOr(10,false,true,true,false,false);// no cluster, without voteshare
+            // we_bias_binary_scoring_top10-3.txt -> 0.4637703849192702
+            //new Blender("data/final_deep_trans_method_2_bias.txt","java").blendOr(10,true,false,true,false,false);// no cluster, without voteshare
+            // we_bias_binary_scoring_top10-4.txt -> 0.32308411520629504
+            //new Blender("data/final_deep_trans_method_2_bias.txt","java").blendOr(10,false,false,true,false,false);// no cluster, without voteshare
+            // we_bias_binary_scoring_top10-5.txt -> 0.4616967081270588
+            //new Blender("data/final_deep_trans_method_2_bias.txt","java").blendOr(10,true,true,false,false,false);// no cluster, without voteshare
+            // we_bias_binary_scoring_top10-6.txt -> 0.38329766874637244
+            //new Blender("data/final_deep_trans_method_2_bias.txt","java").blendOr(10,false,true,false,false,false);// no cluster, without voteshare
+            // we_bias_binary_scoring_top10-7.txt -> 0.3644075706108588
+            //new Blender("data/final_deep_trans_method_2_bias.txt","java").blendOr(10,true,false,false,false,false);// no cluster, without voteshare
+            // we_bias_binary_scoring_top10-8.txt -> 0.3437617310921411
+            //new Blender("data/final_deep_trans_method_2_bias.txt","java").blendOr(10,false,false,false,false,false);// no cluster, without voteshare
+
+            // we_bias_voteshare_scoring_top10.txt   -> 0.6167337832980626
+            //new Blender("data/final_deep_trans_method_2_bias.txt","java").blendOr(10,true,true,true,false,true);// no cluster, with voteshare
+            // we_bias_voteshare_scoring_top10-2.txt -> 0.411461949218602
+            //new Blender("data/final_deep_trans_method_2_bias.txt","java").blendOr(10,false,true,true,false,true);// no cluster, with voteshare
+            // we_bias_voteshare_scoring_top10-3.txt -> 0.507154967181025
+            //new Blender("data/final_deep_trans_method_2_bias.txt","java").blendOr(10,true,false,true,false,true);// no cluster, with voteshare
+            // we_bias_voteshare_scoring_top10-4.txt -> 0.3760177041800033
+            //new Blender("data/final_deep_trans_method_2_bias.txt","java").blendOr(10,false,false,true,false,true);// no cluster, with voteshare
+            // we_bias_voteshare_scoring_top10-5.txt -> 0.5794790209712769
+            //new Blender("data/final_deep_trans_method_2_bias.txt","java").blendOr(10,true,true,false,false,true);// no cluster, with voteshare
+            // we_bias_voteshare_scoring_top10-6.txt -> 0.4485481133647732
+            //new Blender("data/final_deep_trans_method_2_bias.txt","java").blendOr(10,false,true,false,false,true);// no cluster, with voteshare
+            // we_bias_voteshare_scoring_top10-7.txt -> 0.4594262689601331
+            //new Blender("data/final_deep_trans_method_2_bias.txt","java").blendOr(10,true,false,false,false,true);// no cluster, with voteshare
+            // we_bias_voteshare_scoring_top10-8.txt -> 0.40835344694383435
+            //new Blender("data/final_deep_trans_method_2_bias.txt","java").blendOr(10,false,false,false,false,true);// no cluster, with voteshare
+
+            // astm1_binary_scoring_top10.txt   ->
+            //new Blender("data/final_astm1.txt","java").blendOr(10,true,true,true,false,false);// no cluster, without voteshare
+            // astm1_binary_scoring_top10-2.txt ->
+            //new Blender("data/final_astm1.txt","java").blendOr(10,false,true,true,false,false);// no cluster, without voteshare
+            // astm1_binary_scoring_top10-3.txt ->
+            //new Blender("data/final_astm1.txt","java").blendOr(10,true,false,true,false,false);// no cluster, without voteshare
+            // astm1_binary_scoring_top10-4.txt ->
+            //new Blender("data/final_astm1.txt","java").blendOr(10,false,false,true,false,false);// no cluster, without voteshare
+            // astm1_binary_scoring_top10-5.txt ->
+            //new Blender("data/final_astm1.txt","java").blendOr(10,true,true,false,false,false);// no cluster, without voteshare
+            // astm1_binary_scoring_top10-6.txt ->
+            //new Blender("data/final_astm1.txt","java").blendOr(10,false,true,false,false,false);// no cluster, without voteshare
+            // astm1_binary_scoring_top10-7.txt ->
+            //new Blender("data/final_astm1.txt","java").blendOr(10,true,false,false,false,false);// no cluster, without voteshare
+            // astm1_binary_scoring_top10-8.txt ->
+            //new Blender("data/final_astm1.txt","java").blendOr(10,false,false,false,false,false);// no cluster, without voteshare
+
+            // astm1_voteshare_scoring_top10.txt   ->
+            //new Blender("data/final_astm1.txt","java").blendOr(10,true,true,true,false,true);// no cluster, with voteshare
+            // astm1_voteshare_scoring_top10-2.txt ->
+            //new Blender("data/final_astm1.txt","java").blendOr(10,false,true,true,false,true);// no cluster, with voteshare
+            // astm1_voteshare_scoring_top10-3.txt ->
+            //new Blender("data/final_astm1.txt","java").blendOr(10,true,false,true,false,true);// no cluster, with voteshare
+            // astm1_voteshare_scoring_top10-4.txt ->
+            //new Blender("data/final_astm1.txt","java").blendOr(10,false,false,true,false,true);// no cluster, with voteshare
+            // astm1_voteshare_scoring_top10-5.txt ->
+            //new Blender("data/final_astm1.txt","java").blendOr(10,true,true,false,false,true);// no cluster, with voteshare
+            // astm1_voteshare_scoring_top10-6.txt ->
+            //new Blender("data/final_astm1.txt","java").blendOr(10,false,true,false,false,true);// no cluster, with voteshare
+            // astm1_voteshare_scoring_top10-7.txt ->
+            //new Blender("data/final_astm1.txt","java").blendOr(10,true,false,false,false,true);// no cluster, with voteshare
+            // astm1_voteshare_scoring_top10-8.txt ->
+            //new Blender("data/final_astm1.txt","java").blendOr(10,false,false,false,false,true);// no cluster, with voteshare
+
+            // astm2_binary_scoring_top10.txt   ->
+            //new Blender("data/final_astm2.txt","java").blendOr(10,true,true,true,false,false);// no cluster, without voteshare
+            // astm2_binary_scoring_top10-2.txt ->
+            //new Blender("data/final_astm2.txt","java").blendOr(10,false,true,true,false,false);// no cluster, without voteshare
+            // astm2_binary_scoring_top10-3.txt ->
+            //new Blender("data/final_astm2.txt","java").blendOr(10,true,false,true,false,false);// no cluster, without voteshare
+            // astm2_binary_scoring_top10-4.txt ->
+            //new Blender("data/final_astm2.txt","java").blendOr(10,false,false,true,false,false);// no cluster, without voteshare
+            // astm2_binary_scoring_top10-5.txt ->
+            //new Blender("data/final_astm2.txt","java").blendOr(10,true,true,false,false,false);// no cluster, without voteshare
+            // astm2_binary_scoring_top10-6.txt ->
+            //new Blender("data/final_astm2.txt","java").blendOr(10,false,true,false,false,false);// no cluster, without voteshare
+            // astm2_binary_scoring_top10-7.txt ->
+            //new Blender("data/final_astm2.txt","java").blendOr(10,true,false,false,false,false);// no cluster, without voteshare
+            // astm2_binary_scoring_top10-8.txt ->
+            //new Blender("data/final_astm2.txt","java").blendOr(10,false,false,false,false,false);// no cluster, without voteshare
+
+            // astm2_voteshare_scoring_top10.txt   ->
+            //new Blender("data/final_astm2.txt","java").blendOr(10,true,true,true,false,true);// no cluster, with voteshare
+            // astm2_voteshare_scoring_top10-2.txt ->
+            //new Blender("data/final_astm2.txt","java").blendOr(10,false,true,true,false,true);// no cluster, with voteshare
+            // astm2_voteshare_scoring_top10-3.txt ->
+            //new Blender("data/final_astm2.txt","java").blendOr(10,true,false,true,false,true);// no cluster, with voteshare
+            // astm2_voteshare_scoring_top10-4.txt ->
+            //new Blender("data/final_astm2.txt","java").blendOr(10,false,false,true,false,true);// no cluster, with voteshare
+            // astm2_voteshare_scoring_top10-5.txt ->
+            //new Blender("data/final_astm2.txt","java").blendOr(10,true,true,false,false,true);// no cluster, with voteshare
+            // astm2_voteshare_scoring_top10-6.txt ->
+            //new Blender("data/final_astm2.txt","java").blendOr(10,false,true,false,false,true);// no cluster, with voteshare
+            // astm2_voteshare_scoring_top10-7.txt ->
+            //new Blender("data/final_astm2.txt","java").blendOr(10,true,false,false,false,true);// no cluster, with voteshare
+            // astm2_voteshare_scoring_top10-8.txt ->
+            //new Blender("data/final_astm2.txt","java").blendOr(10,false,false,false,false,true);// no cluster, with voteshare
+
+            // php
+            // mi_binary_scoring_top10.txt   -> 0.5506109682292919
+            //new Blender("data/tag_mutuals.txt","php").blendOr(10,true,true,true,false,false);// no cluster, without voteshare
+            // mi_binary_scoring_top10-2.txt -> 0.37667571280540346
+            //new Blender("data/tag_mutuals.txt","php").blendOr(10,false,true,true,false,false);// no cluster, without voteshare
+            // mi_binary_scoring_top10-3.txt -> 0.552917536962662
+            //new Blender("data/tag_mutuals.txt","php").blendOr(10,true,false,true,false,false);// no cluster, without voteshare
+            // mi_binary_scoring_top10-4.txt -> 0.37459027742478956
+            //new Blender("data/tag_mutuals.txt","php").blendOr(10,false,false,true,false,false);// no cluster, without voteshare
+            // mi_binary_scoring_top10-5.txt -> 0.4609018109168374
+            //new Blender("data/tag_mutuals.txt","php").blendOr(10,true,true,false,false,false);// no cluster, without voteshare
+            // mi_binary_scoring_top10-6.txt -> 0.41508405010610366
+            //new Blender("data/tag_mutuals.txt","php").blendOr(10,false,true,false,false,false);// no cluster, without voteshare
+            // mi_binary_scoring_top10-7.txt -> 0.4601983471239079
+            //new Blender("data/tag_mutuals.txt","php").blendOr(10,true,false,false,false,false);// no cluster, without voteshare
+            // mi_binary_scoring_top10-8.txt -> 0.4097415324336776
+            //new Blender("data/tag_mutuals.txt","php").blendOr(10,false,false,false,false,false);// no cluster, without voteshare
+
+            // mi_voteshare_scoring_top10.txt   -> 0.6068528174486228
+            //new Blender("data/tag_mutuals.txt","php").blendOr(10,true,true,true,false,true);// no cluster, with voteshare
+            // mi_voteshare_scoring_top10-2.txt -> 0.4210934192084397
+            //new Blender("data/tag_mutuals.txt","php").blendOr(10,false,true,true,false,true);// no cluster, with voteshare
+            // mi_voteshare_scoring_top10-3.txt -> 0.6080484556480228
+            //new Blender("data/tag_mutuals.txt","php").blendOr(10,true,false,true,false,true);// no cluster, with voteshare
+            // mi_voteshare_scoring_top10-4.txt -> 0.4184687455926121
+            //new Blender("data/tag_mutuals.txt","php").blendOr(10,false,false,true,false,true);// no cluster, with voteshare
+            // mi_voteshare_scoring_top10-5.txt -> 0.5761460654749443
+            //new Blender("data/tag_mutuals.txt","php").blendOr(10,true,true,false,false,true);// no cluster, with voteshare
+            // mi_voteshare_scoring_top10-6.txt -> 0.4727687616856634
+            //new Blender("data/tag_mutuals.txt","php").blendOr(10,false,true,false,false,true);// no cluster, with voteshare
+            // mi_voteshare_scoring_top10-7.txt -> 0.5659338351701494
+            //new Blender("data/tag_mutuals.txt","php").blendOr(10,true,false,false,false,true);// no cluster, with voteshare
+            // mi_voteshare_scoring_top10-8.txt -> 0.461818767207734
+            //new Blender("data/tag_mutuals.txt","php").blendOr(10,false,false,false,false,true);// no cluster, with voteshare
+
+            // we_binary_scoring_top10.txt   -> 0.46976203714067455
+            //new Blender("data/final_deep_trans_method_2.txt","php").blendOr(10,true,true,true,false,false);// no cluster, without voteshare
+            // we_binary_scoring_top10-2.txt -> 0.3037958046685253
+            //new Blender("data/final_deep_trans_method_2.txt","php").blendOr(10,false,true,true,false,false);// no cluster, without voteshare
+            // we_binary_scoring_top10-3.txt -> 0.40340246785034667
+            //new Blender("data/final_deep_trans_method_2.txt","php").blendOr(10,true,false,true,false,false);// no cluster, without voteshare
+            // we_binary_scoring_top10-4.txt -> 0.2820262390141629
+            //new Blender("data/final_deep_trans_method_2.txt","php").blendOr(10,false,false,true,false,false);// no cluster, without voteshare
+            // we_binary_scoring_top10-5.txt -> 0.3663750911211665
+            //new Blender("data/final_deep_trans_method_2.txt","php").blendOr(10,true,true,false,false,false);// no cluster, without voteshare
+            // we_binary_scoring_top10-6.txt -> 0.3068251460761741
+            //new Blender("data/final_deep_trans_method_2.txt","php").blendOr(10,false,true,false,false,false);// no cluster, without voteshare
+            // we_binary_scoring_top10-7.txt -> 0.3085244054363206
+            //new Blender("data/final_deep_trans_method_2.txt","php").blendOr(10,true,false,false,false,false);// no cluster, without voteshare
+            // we_binary_scoring_top10-8.txt -> 0.2819493064890582
+            //new Blender("data/final_deep_trans_method_2.txt","php").blendOr(10,false,false,false,false,false);// no cluster, without voteshare
+
+            // we_voteshare_scoring_top10.txt   -> 0.5075773203447728
+            //new Blender("data/final_deep_trans_method_2.txt","php").blendOr(10,true,true,true,false,true);// no cluster, with voteshare
+            // we_voteshare_scoring_top10-2.txt -> 0.3337646134081457
+            //new Blender("data/final_deep_trans_method_2.txt","php").blendOr(10,false,true,true,false,true);// no cluster, with voteshare
+            // we_voteshare_scoring_top10-3.txt -> 0.42797167396563324
+            //new Blender("data/final_deep_trans_method_2.txt","php").blendOr(10,true,false,true,false,true);// no cluster, with voteshare
+            // we_voteshare_scoring_top10-4.txt -> 0.3076852330408491
+            //new Blender("data/final_deep_trans_method_2.txt","php").blendOr(10,false,false,true,false,true);// no cluster, with voteshare
+            // we_voteshare_scoring_top10-5.txt -> 0.4598375151863099
+            //new Blender("data/final_deep_trans_method_2.txt","php").blendOr(10,true,true,false,false,true);// no cluster, with voteshare
+            // we_voteshare_scoring_top10-6.txt -> 0.3498312289324959
+            //new Blender("data/final_deep_trans_method_2.txt","php").blendOr(10,false,true,false,false,true);// no cluster, with voteshare
+            // we_voteshare_scoring_top10-7.txt -> 0.3792624765392032
+            //new Blender("data/final_deep_trans_method_2.txt","php").blendOr(10,true,false,false,false,true);// no cluster, with voteshare
+            // we_voteshare_scoring_top10-8.txt -> 0.31818540354236263
+            //new Blender("data/final_deep_trans_method_2.txt","php").blendOr(10,false,false,false,false,true);// no cluster, with voteshare
+
+            // we_bias_binary_scoring_top10.txt   -> 0.4908270811739773
+            //new Blender("data/final_deep_trans_method_2_bias.txt","php").blendOr(10,true,true,true,false,false);// no cluster, without voteshare
+            // we_bias_binary_scoring_top10-2.txt -> 0.29845538269267174
+            //new Blender("data/final_deep_trans_method_2_bias.txt","php").blendOr(10,false,true,true,false,false);// no cluster, without voteshare
+            // we_bias_binary_scoring_top10-3.txt -> 0.40712626942045227
+            //new Blender("data/final_deep_trans_method_2_bias.txt","php").blendOr(10,true,false,true,false,false);// no cluster, without voteshare
+            // we_bias_binary_scoring_top10-4.txt -> 0.27279766005905043
+            //new Blender("data/final_deep_trans_method_2_bias.txt","php").blendOr(10,false,false,true,false,false);// no cluster, without voteshare
+            // we_bias_binary_scoring_top10-5.txt -> 0.3870066732288558
+            //new Blender("data/final_deep_trans_method_2_bias.txt","php").blendOr(10,true,true,false,false,false);// no cluster, without voteshare
+            // we_bias_binary_scoring_top10-6.txt -> 0.3373023430035428
+            //new Blender("data/final_deep_trans_method_2_bias.txt","php").blendOr(10,false,true,false,false,false);// no cluster, without voteshare
+            // we_bias_binary_scoring_top10-7.txt -> 0.3237921525237683
+            //new Blender("data/final_deep_trans_method_2_bias.txt","php").blendOr(10,true,false,false,false,false);// no cluster, without voteshare
+            // we_bias_binary_scoring_top10-8.txt -> 0.31157385831670537
+            //new Blender("data/final_deep_trans_method_2_bias.txt","php").blendOr(10,false,false,false,false,false);// no cluster, without voteshare
+
+            // we_bias_voteshare_scoring_top10.txt   -> 0.5261372954263899
+            //new Blender("data/final_deep_trans_method_2_bias.txt","php").blendOr(10,true,true,true,false,true);// no cluster, with voteshare
+            // we_bias_voteshare_scoring_top10-2.txt -> 0.3317276968434612
+            //new Blender("data/final_deep_trans_method_2_bias.txt","php").blendOr(10,false,true,true,false,true);// no cluster, with voteshare
+            // we_bias_voteshare_scoring_top10-3.txt -> 0.4343472346535113
+            //new Blender("data/final_deep_trans_method_2_bias.txt","php").blendOr(10,true,false,true,false,true);// no cluster, with voteshare
+            // we_bias_voteshare_scoring_top10-4.txt -> 0.30797127356546583
+            //new Blender("data/final_deep_trans_method_2_bias.txt","php").blendOr(10,false,false,true,false,true);// no cluster, with voteshare
+            // we_bias_voteshare_scoring_top10-5.txt -> 0.4734994012848688
+            //new Blender("data/final_deep_trans_method_2_bias.txt","php").blendOr(10,true,true,false,false,true);// no cluster, with voteshare
+            // we_bias_voteshare_scoring_top10-6.txt -> 0.38280515042971636
+            //new Blender("data/final_deep_trans_method_2_bias.txt","php").blendOr(10,false,true,false,false,true);// no cluster, with voteshare
+            // we_bias_voteshare_scoring_top10-7.txt -> 0.3934041553668638
+            //new Blender("data/final_deep_trans_method_2_bias.txt","php").blendOr(10,true,false,false,false,true);// no cluster, with voteshare
+            // we_bias_voteshare_scoring_top10-8.txt -> 0.3520208870705923
+            //new Blender("data/final_deep_trans_method_2_bias.txt","php").blendOr(10,false,false,false,false,true);// no cluster, with voteshare
+
+            // astm1_binary_scoring_top10.txt   ->
+            //new Blender("data/final_astm1.txt","php").blendOr(10,true,true,true,false,false);// no cluster, without voteshare
+            // astm1_binary_scoring_top10-2.txt ->
+            //new Blender("data/final_astm1.txt","php").blendOr(10,false,true,true,false,false);// no cluster, without voteshare
+            // astm1_binary_scoring_top10-3.txt ->
+            //new Blender("data/final_astm1.txt","php").blendOr(10,true,false,true,false,false);// no cluster, without voteshare
+            // astm1_binary_scoring_top10-4.txt ->
+            //new Blender("data/final_astm1.txt","php").blendOr(10,false,false,true,false,false);// no cluster, without voteshare
+            // astm1_binary_scoring_top10-5.txt ->
+            //new Blender("data/final_astm1.txt","php").blendOr(10,true,true,false,false,false);// no cluster, without voteshare
+            // astm1_binary_scoring_top10-6.txt ->
+            //new Blender("data/final_astm1.txt","php").blendOr(10,false,true,false,false,false);// no cluster, without voteshare
+            // astm1_binary_scoring_top10-7.txt ->
+            //new Blender("data/final_astm1.txt","php").blendOr(10,true,false,false,false,false);// no cluster, without voteshare
+            // astm1_binary_scoring_top10-8.txt ->
+            //new Blender("data/final_astm1.txt","php").blendOr(10,false,false,false,false,false);// no cluster, without voteshare
+
+            // astm1_voteshare_scoring_top10.txt   ->
+            //new Blender("data/final_astm1.txt","php").blendOr(10,true,true,true,false,true);// no cluster, with voteshare
+            // astm1_voteshare_scoring_top10-2.txt ->
+            //new Blender("data/final_astm1.txt","php").blendOr(10,false,true,true,false,true);// no cluster, with voteshare
+            // astm1_voteshare_scoring_top10-3.txt ->
+            //new Blender("data/final_astm1.txt","php").blendOr(10,true,false,true,false,true);// no cluster, with voteshare
+            // astm1_voteshare_scoring_top10-4.txt ->
+            //new Blender("data/final_astm1.txt","php").blendOr(10,false,false,true,false,true);// no cluster, with voteshare
+            // astm1_voteshare_scoring_top10-5.txt ->
+            //new Blender("data/final_astm1.txt","php").blendOr(10,true,true,false,false,true);// no cluster, with voteshare
+            // astm1_voteshare_scoring_top10-6.txt ->
+            //new Blender("data/final_astm1.txt","php").blendOr(10,false,true,false,false,true);// no cluster, with voteshare
+            // astm1_voteshare_scoring_top10-7.txt ->
+            //new Blender("data/final_astm1.txt","php").blendOr(10,true,false,false,false,true);// no cluster, with voteshare
+            // astm1_voteshare_scoring_top10-8.txt ->
+            //new Blender("data/final_astm1.txt","php").blendOr(10,false,false,false,false,true);// no cluster, with voteshare
+
+            // astm2_binary_scoring_top10.txt   ->
+            //new Blender("data/final_astm2.txt","php").blendOr(10,true,true,true,false,false);// no cluster, without voteshare
+            // astm2_binary_scoring_top10-2.txt ->
+            //new Blender("data/final_astm2.txt","php").blendOr(10,false,true,true,false,false);// no cluster, without voteshare
+            // astm2_binary_scoring_top10-3.txt ->
+            //new Blender("data/final_astm2.txt","php").blendOr(10,true,false,true,false,false);// no cluster, without voteshare
+            // astm2_binary_scoring_top10-4.txt ->
+            //new Blender("data/final_astm2.txt","php").blendOr(10,false,false,true,false,false);// no cluster, without voteshare
+            // astm2_binary_scoring_top10-5.txt ->
+            //new Blender("data/final_astm2.txt","php").blendOr(10,true,true,false,false,false);// no cluster, without voteshare
+            // astm2_binary_scoring_top10-6.txt ->
+            //new Blender("data/final_astm2.txt","php").blendOr(10,false,true,false,false,false);// no cluster, without voteshare
+            // astm2_binary_scoring_top10-7.txt ->
+            //new Blender("data/final_astm2.txt","php").blendOr(10,true,false,false,false,false);// no cluster, without voteshare
+            // astm2_binary_scoring_top10-8.txt ->
+            //new Blender("data/final_astm2.txt","php").blendOr(10,false,false,false,false,false);// no cluster, without voteshare
+
+            // astm2_voteshare_scoring_top10.txt   ->
+            //new Blender("data/final_astm2.txt","php").blendOr(10,true,true,true,false,true);// no cluster, with voteshare
+            // astm2_voteshare_scoring_top10-2.txt ->
+            //new Blender("data/final_astm2.txt","php").blendOr(10,false,true,true,false,true);// no cluster, with voteshare
+            // astm2_voteshare_scoring_top10-3.txt ->
+            //new Blender("data/final_astm2.txt","php").blendOr(10,true,false,true,false,true);// no cluster, with voteshare
+            // astm2_voteshare_scoring_top10-4.txt ->
+            //new Blender("data/final_astm2.txt","php").blendOr(10,false,false,true,false,true);// no cluster, with voteshare
+            // astm2_voteshare_scoring_top10-5.txt ->
+            //new Blender("data/final_astm2.txt","php").blendOr(10,true,true,false,false,true);// no cluster, with voteshare
+            // astm2_voteshare_scoring_top10-6.txt ->
+            //new Blender("data/final_astm2.txt","php").blendOr(10,false,true,false,false,true);// no cluster, with voteshare
+            // astm2_voteshare_scoring_top10-7.txt ->
+            //new Blender("data/final_astm2.txt","php").blendOr(10,true,false,false,false,true);// no cluster, with voteshare
+            // astm2_voteshare_scoring_top10-8.txt ->
+            //new Blender("data/final_astm2.txt","php").blendOr(10,false,false,false,false,true);// no cluster, with voteshare
+
 //            new Blender("data/tag_mutuals.txt","php").blendOr(10,false,true,true,false);
 //            new Blender("data/tag_mutuals.txt","java").blendOr(10,true,true,true,true);
 //            new Blender("data/final_deep_trans_method_2.txt","php").blendOr(10,true,true,true,false,false);//no cluster
