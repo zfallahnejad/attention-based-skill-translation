@@ -31,14 +31,16 @@ public class SkillTranslation {
     IndexReader reader;
     IndexSearcher searcher;
 
-    private void loadVoteShare() {
+    private void loadVoteShare(String file_path) {
         //System.out.println("Loading voteshares");
         this.voteShare = new HashMap<>();
         try {
-            BufferedReader reader = new BufferedReader(new FileReader(Constants.Voteshare_Directory + mainTag + "/" + mainTag + "_vote_share.csv"));
+            BufferedReader reader = new BufferedReader(new FileReader(file_path));
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.trim().split(",");
+                if (line.trim().equals("aid,voteshare"))
+                    continue;
                 this.voteShare.put(Integer.parseInt(parts[0]), Double.parseDouble(parts[1]));
             }
             reader.close();
@@ -106,7 +108,7 @@ public class SkillTranslation {
         return post_tags.get(aid).contains(tag);
     }
 
-    public SkillTranslation(String indexPath, String topTag, String XMLInput) {
+    public SkillTranslation(String indexPath, String topTag, String XMLInput, Boolean use_vote_share, String VoteshareInput) {
         try {
             mainTag = topTag;
             xml_input = XMLInput;
@@ -116,7 +118,8 @@ public class SkillTranslation {
             searcher = new IndexSearcher(reader);
             analyzer = new StandardAnalyzer();
             PostTags();
-            loadVoteShare();
+            if (use_vote_share)
+                loadVoteShare(VoteshareInput);
         } catch (IOException e) {
             e.printStackTrace();
         }

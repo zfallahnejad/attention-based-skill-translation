@@ -1,27 +1,78 @@
 import AttentionalTranslation.SkillTranslation;
 import GoldenSet.ExpertUsers;
 import Index.LuceneIndex;
-import Utility.Constants;
-import Utility.MAP;
-import Utility.VoteShare;
+import Utility.*;
 
 import java.io.*;
 import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
+        String outfile_prefix;
+        String voteshare_path;
+
         Date start = new Date();
         Main m = new Main();
 
         //Create a lucene index for specified subset of stackoverflow dataset
-        m.IndexInputData("java");
-        m.IndexInputData("php");
+        //m.IndexInputData("java");
+        //m.IndexInputData("php");
 
-        // ASTM-1 and ASTM-2
-        m.AttentionalSkillTranslation("java", "java_astm1_best", true, 10, "Word", "Test");
-        m.AttentionalSkillTranslation("java", "java_astm2_best", false, 10, "Word", "Test");
-        m.AttentionalSkillTranslation("php", "php_astm1_best", true, 10, "Word", "Test");
-        m.AttentionalSkillTranslation("php", "php_astm2_best", false, 10, "Word", "Test");
+        //VoteShare v = new VoteShare();
+        //v.compute_voteshare("java", Constants.JavaXMLInput);
+        //v.compute_voteshare("php", Constants.PhpXMLInput);
+        //VoteShare2 v = new VoteShare2();
+        //v.compute_voteshare("java", Constants.JavaXMLInput);
+        //v.compute_voteshare("php", Constants.PhpXMLInput);
+        //VoteShare3 v = new VoteShare3();
+        //v.compute_voteshare("java", Constants.JavaXMLInput);
+        //v.compute_voteshare("php", Constants.PhpXMLInput);
+        //VoteShare4 v = new VoteShare4();
+        //v.compute_voteshare("java", Constants.JavaXMLInput);
+        //v.compute_voteshare("php", Constants.PhpXMLInput);
+        //VoteShare5 v = new VoteShare5();
+        //v.compute_voteshare("java", Constants.JavaXMLInput);
+        //v.compute_voteshare("php", Constants.PhpXMLInput);
+
+        // ASTM-1 and ASTM-2 - binary scoring
+        //outfile_prefix = "java_astm1_best" + "_top" + 10 + "_without_voteshare";
+        //m.AttentionalSkillTranslation("java", "java_astm1_best", false, 10, "Word", "Test", "", outfile_prefix);
+        //outfile_prefix = "java_astm2_best" + "_top" + 10 + "_without_voteshare";
+        //m.AttentionalSkillTranslation("java", "java_astm2_best", false, 10, "Word", "Test", "", outfile_prefix);
+        //outfile_prefix = "php_astm1_best" + "_top" + 10 + "_without_voteshare";
+        //m.AttentionalSkillTranslation("php", "php_astm1_best", false, 10, "Word", "Test", "", outfile_prefix);
+        //outfile_prefix = "php_astm2_best" + "_top" + 10 + "_without_voteshare";
+        //m.AttentionalSkillTranslation("php", "php_astm2_best", false, 10, "Word", "Test", "", outfile_prefix);
+
+        // ASTM-1 and ASTM-2 - voteshare scoring - nobari
+        //outfile_prefix = "java_astm1_best" + "_top" + 10 + "_voteshare_nobari";
+        //voteshare_path = Constants.Voteshare_Directory + "java" + "/" + "java_vote_share_nobari.csv";
+        //m.AttentionalSkillTranslation("java", "java_astm1_best", true, 10, "Word", "Test", voteshare_path, outfile_prefix);
+        //outfile_prefix = "java_astm2_best" + "_top" + 10 + "_voteshare_nobari";
+        //voteshare_path = Constants.Voteshare_Directory + "java" + "/" + "java_vote_share_nobari.csv";
+        //m.AttentionalSkillTranslation("java", "java_astm2_best", true, 10, "Word", "Test", voteshare_path, outfile_prefix);
+        //outfile_prefix = "php_astm1_best" + "_top" + 10 + "_voteshare_nobari";
+        //voteshare_path = Constants.Voteshare_Directory + "php" + "/" + "php_vote_share_nobari.csv";
+        //m.AttentionalSkillTranslation("php", "php_astm1_best", true, 10, "Word", "Test", voteshare_path, outfile_prefix);
+        //outfile_prefix = "php_astm2_best" + "_top" + 10 + "_voteshare_nobari";
+        //voteshare_path = Constants.Voteshare_Directory + "php" + "/" + "php_vote_share_nobari.csv";
+        //m.AttentionalSkillTranslation("php", "php_astm2_best", true, 10, "Word", "Test", voteshare_path, outfile_prefix);
+
+        for (int v = 1; v < 6; v++) {
+            // ASTM-1 and ASTM-2 - voteshare scoring - my voteshare version v
+            outfile_prefix = "java_astm1_best" + "_top" + 10 + "_voteshare_v" + v;
+            voteshare_path = Constants.Voteshare_Directory + "java" + "/" + "java_vote_share_v" + v + ".csv";
+            m.AttentionalSkillTranslation("java", "java_astm1_best", true, 10, "Word", "Test", voteshare_path, outfile_prefix);
+            outfile_prefix = "java_astm2_best" + "_top" + 10 + "_voteshare_v" + v;
+            voteshare_path = Constants.Voteshare_Directory + "java" + "/" + "java_vote_share_v" + v + ".csv";
+            m.AttentionalSkillTranslation("java", "java_astm2_best", true, 10, "Word", "Test", voteshare_path, outfile_prefix);
+            outfile_prefix = "php_astm1_best" + "_top" + 10 + "_voteshare_v" + v;
+            voteshare_path = Constants.Voteshare_Directory + "php" + "/" + "php_vote_share_v" + v + ".csv";
+            m.AttentionalSkillTranslation("php", "php_astm1_best", true, 10, "Word", "Test", voteshare_path, outfile_prefix);
+            outfile_prefix = "php_astm2_best" + "_top" + 10 + "_voteshare_v" + v;
+            voteshare_path = Constants.Voteshare_Directory + "php" + "/" + "php_vote_share_v" + v + ".csv";
+            m.AttentionalSkillTranslation("php", "php_astm2_best", true, 10, "Word", "Test", voteshare_path, outfile_prefix);
+        }
 
         Date end = new Date();
         System.out.println(end.getTime() - start.getTime() + " total milliseconds");
@@ -48,7 +99,7 @@ public class Main {
     /**
      * Finds Experts Users to be used as golden set
      * This function considered users expertise in each tag
-     *
+     * <p>
      * Note It seems that this implementation is a not equal to their implementation of golden set creator so don't use it
      */
     public void FindExpertUsers(String tag) {
@@ -63,30 +114,24 @@ public class Main {
         }
     }
 
-    public void AttentionalSkillTranslation(String tag, String model_name, boolean use_vote_share, int topWords, String type, String dataset) {
+    public void AttentionalSkillTranslation(String tag, String model_name, boolean use_vote_share, int topWords, String type, String dataset, String voteshare_file, String outfile_prefix) {
         if (tag.equals("java")) {
             String index_path = Constants.JavaIndexDirectory2;
             String IndexName = index_path.substring(index_path.lastIndexOf("/") + 1);
 
-            SkillTranslation b = new SkillTranslation(index_path, "java", Constants.JavaXMLInput);
+            SkillTranslation b = new SkillTranslation(index_path, "java", Constants.JavaXMLInput, use_vote_share, voteshare_file);
 
             String infile = Constants.JavaAttentionalTranslation_Directory + model_name + ".txt";
             File indir = new File(infile);
             if (!indir.exists())
                 return;
 
-            String outfile = model_name;
-            if (use_vote_share)
-                outfile += "_top" + topWords + "_voteshare";
-            else
-                outfile += "_top" + topWords + "_without_voteshare";
             System.out.println(infile);
-
             System.out.println("Translation Type: " + type);
             System.out.println("Dataset Part: " + dataset);
 
-            String attentional_result_dir = outfile + "_" + IndexName;
-            String attentional_result_filename = outfile + "_type" + type + "_dataset" + dataset;
+            String attentional_result_dir = outfile_prefix + "_" + IndexName;
+            String attentional_result_filename = outfile_prefix + "_type" + type + "_dataset" + dataset;
             String DirName = Constants.Results_Directory + attentional_result_dir + "/";
 
             File dir = new File(Constants.Results_Directory + attentional_result_dir);
@@ -115,25 +160,19 @@ public class Main {
             String index_path = Constants.PhpIndexDirectory2;
             String IndexName = index_path.substring(index_path.lastIndexOf("/") + 1);
 
-            SkillTranslation b = new SkillTranslation(index_path, "php", Constants.PhpXMLInput);
+            SkillTranslation b = new SkillTranslation(index_path, "php", Constants.PhpXMLInput, use_vote_share, voteshare_file);
 
             String infile = Constants.PhpAttentionalTranslation_Directory + model_name + ".txt";
             File indir = new File(infile);
             if (!indir.exists())
                 return;
 
-            String outfile = model_name;
-            if (use_vote_share)
-                outfile += "_top" + topWords + "_voteshare";
-            else
-                outfile += "_top" + topWords + "_without_voteshare";
             System.out.println(infile);
-
             System.out.println("Translation Type: " + type);
             System.out.println("Dataset Part: " + dataset);
 
-            String attentional_result_dir = outfile + "_" + IndexName;
-            String attentional_result_filename = outfile + "_type" + type + "_dataset" + dataset;
+            String attentional_result_dir = outfile_prefix + "_" + IndexName;
+            String attentional_result_filename = outfile_prefix + "_type" + type + "_dataset" + dataset;
             String DirName = Constants.Results_Directory + attentional_result_dir + "/";
 
             File dir = new File(Constants.Results_Directory + attentional_result_dir);

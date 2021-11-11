@@ -47,24 +47,25 @@ public class VoteShare {
             }
             reader.close();
 
-            PrintWriter out = new PrintWriter(Constants.Voteshare_Directory + tag + "/" + tag + "_question_answers.csv");
-            for (Integer qid : question_list) {
-                ArrayList<Integer> ans = question_answers.get(qid);
-                String answers = "";
-                for (Integer aid : ans) {
-                    answers += "," + aid;
-                }
-                out.println(qid + answers);
-            }
-            out.close();
+            PrintWriter out;
+            // out = new PrintWriter(Constants.Voteshare_Directory + tag + "/" + tag + "_question_answers_v1.csv");
+            // for (Integer qid : question_list) {
+            //     ArrayList<Integer> ans = question_answers.get(qid);
+            //     String answers = "";
+            //     for (Integer aid : ans) {
+            //         answers += "," + aid;
+            //     }
+            //     out.println(qid + answers);
+            // }
+            // out.close();
 
-            out = new PrintWriter(Constants.Voteshare_Directory + tag + "/" + tag + "_answer_scores.csv");
-            for (Integer aid : answer_list) {
-                out.println(aid + "," + answer_score.get(aid));
-            }
-            out.close();
+            // out = new PrintWriter(Constants.Voteshare_Directory + tag + "/" + tag + "_answer_scores_v1.csv");
+            // for (Integer aid : answer_list) {
+            //     out.println(aid + "," + answer_score.get(aid));
+            // }
+            // out.close();
 
-            out = new PrintWriter(Constants.Voteshare_Directory + tag + "/" + tag + "_vote_share.csv");
+            out = new PrintWriter(Constants.Voteshare_Directory + tag + "/" + tag + "_vote_share_v1.csv");
             HashMap<Integer, Integer> question_sum_scores = new HashMap<>();
             for (Integer qid : question_list) {
                 Integer sum_score = 0;
@@ -74,12 +75,17 @@ public class VoteShare {
                 question_sum_scores.put(qid, sum_score);
             }
             for (Integer aid : answer_list) {
-                Double voteshare = 0.0;
+                double voteshare = 0.0;
                 if (question_sum_scores.get(answer_parent.get(aid)) != 0) {
                     voteshare = (answer_score.get(aid) * 1.0 / question_sum_scores.get(answer_parent.get(aid)));
                 }
-                out.println(aid + "," + voteshare);
-                System.out.println(aid + "," + voteshare);
+                if (String.valueOf(voteshare).length() <= 4) {
+                    out.println(aid + "," + voteshare);
+                    System.out.println(aid + "," + voteshare);
+                } else {
+                    out.println(aid + "," + String.format("%.4f", voteshare));
+                    System.out.println(aid + "," + String.format("%.4f", voteshare));
+                }
             }
             out.close();
         } catch (IOException e) {
