@@ -703,10 +703,11 @@ public class Balog
                 int totalTerm = 0;
                 for (int uid : entry.getValue())
                 {
+                    Post p = new Post(searcher.doc(uid));
                     //double voteshare_score = 1.0;
-                    double voteshare_score = voteShare.getOrDefault(uid, 0.0);
+                    double voteshare_score = voteShare.getOrDefault(p.getId(), 0.0);
                     if (voteshare_score != 0.0)
-                        writer_out.println("user: " + entry.getKey() +" post: " + uid + " voteshare_score: " + voteshare_score);
+                        writer_out.println("user: " + entry.getKey() +" post: " + p.getId() + " voteshare_score: " + voteshare_score);
                     ExtendedDocument ed = new ExtendedDocument(uid, reader);
                     tmp += (  (double)(ed.getTermFrequency("Body").get(t) == null ? 0 : ed.getTermFrequency("Body").get(t))   / (double)ed.getTermsCount("Body") )* voteshare_score; //p(d|e) = voteshare score
                     totalLen += ed.getTermsCount("Body");
@@ -770,12 +771,11 @@ public class Balog
 
     }
 
-    public ArrayList<EvalResult> balog1ForAllTagsVoteshare(String topTag) throws IOException, ParseException
+    public ArrayList<EvalResult> balog1ForAllTagsVoteshare(String topTag, String voteshare_filename, String log_filename) throws IOException, ParseException
     {
         System.out.println("Loading voteshares");
         HashMap<Integer, Double> voteShare = new HashMap<>();
-        String clusterFilePath = "./data/" + topTag + "_vote_share.csv";
-        BufferedReader reader = new BufferedReader(new FileReader(clusterFilePath));
+        BufferedReader reader = new BufferedReader(new FileReader(voteshare_filename));
         reader.readLine();//remove heading
         String line = "";
         while ((line = reader.readLine()) != null)
@@ -788,8 +788,7 @@ public class Balog
         System.out.println("Loading voteshare done");
 
         //PrintWriter writer_out = new PrintWriter("./log_balog1.txt");
-        PrintWriter writer_out = new PrintWriter("./log_balog1_voteshare_10.txt");
-
+        PrintWriter writer_out = new PrintWriter(log_filename);
         System.out.println("tag:map,p@1,p@5,p@10,TopUser");
         ArrayList<String> tags = Utility.getTags(topTag);
         ArrayList<EvalResult> res = new ArrayList<>();
@@ -945,9 +944,9 @@ public class Balog
             }//for t in q
 
             //double p_d_e = 1.0;
-            double p_d_e = voteShare.getOrDefault(docID, 0.0);
+            double p_d_e = voteShare.getOrDefault(p.getId(), 0.0);
             if (p_d_e != 0.0)
-                writer_out.println("tag: " + bodyTerm + " user: " + uid + " post: " + docID + " score: " + score + " p_d_e: " + p_d_e + " score*p_d_e: " + score * p_d_e);
+                writer_out.println("tag: " + bodyTerm + " user: " + uid + " post: " + doc.get("SId") + " score: " + score + " p_d_e: " + p_d_e + " score*p_d_e: " + score * p_d_e);
 
             double totScore = score * p_d_e;
             if (userScores.containsKey(uid))
@@ -1008,12 +1007,11 @@ public class Balog
         return new EvalResult(bodyTerm, map, p1, p5, p10,topUser);
     }
 
-    public ArrayList<EvalResult> balog2ForAllTagsVoteshare(String topTag) throws IOException, ParseException
+    public ArrayList<EvalResult> balog2ForAllTagsVoteshare(String topTag, String voteshare_filename, String log_filename) throws IOException, ParseException
     {
         System.out.println("Loading voteshares");
         HashMap<Integer, Double> voteShare = new HashMap<>();
-        String clusterFilePath = "./data/" + topTag + "_vote_share.csv";
-        BufferedReader reader = new BufferedReader(new FileReader(clusterFilePath));
+        BufferedReader reader = new BufferedReader(new FileReader(voteshare_filename));
         reader.readLine();//remove heading
         String line = "";
         while ((line = reader.readLine()) != null)
@@ -1026,7 +1024,7 @@ public class Balog
         System.out.println("Loading voteshare done");
 
         //PrintWriter writer_out = new PrintWriter("./log_balog2_java_1.txt");
-        PrintWriter writer_out = new PrintWriter("./log_balog2_voteshare_java_1.txt");
+        PrintWriter writer_out = new PrintWriter(log_filename);
         System.out.println("tag:map,p@1,p@5,p@10,TopUser");
         ArrayList<String> tags = Utility.getTags(topTag);
         ArrayList<EvalResult> res = new ArrayList<>();

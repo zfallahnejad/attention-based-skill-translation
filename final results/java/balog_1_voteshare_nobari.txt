@@ -1,0 +1,205 @@
+"C:\Program Files\Java\jdk1.8.0_162\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.3.2\lib\idea_rt.jar=57248:C:\Program Files\JetBrains\IntelliJ IDEA 2019.3.2\bin" -Dfile.encoding=UTF-8 -classpath "C:\Program Files\Java\jdk1.8.0_162\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\deploy.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\ext\cldrdata.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\ext\jaccess.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\ext\jfxrt.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\ext\localedata.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\ext\nashorn.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\ext\sunec.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\ext\sunmscapi.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\ext\zipfs.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\javaws.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\jfxswt.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\management-agent.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\plugin.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\rt.jar;D:\Sharif\Research_Projects\sof-expert-finding-master\out\production\sof-expert-finding-master;D:\Sharif\Research_Projects\sof-expert-finding-master\lib\jdatepicker-1.3.4.jar;D:\Sharif\Research_Projects\sof-expert-finding-master\lib\jsoup-1.10.1.jar;D:\Sharif\Research_Projects\sof-expert-finding-master\lib\lucene-analyzers-common-6.2.1.jar;D:\Sharif\Research_Projects\sof-expert-finding-master\lib\lucene-core-6.2.1.jar;D:\Sharif\Research_Projects\sof-expert-finding-master\lib\lucene-queries-6.2.1.jar;D:\Sharif\Research_Projects\sof-expert-finding-master\lib\lucene-queryparser-6.2.1.jar" lucenesearch.Program
+Loading voteshares
+Loading voteshare done
+tag:map,p@1,p@5,p@10,TopUser
+algorithm: 0.2184573847887817,0.0,0.4,0.4,571407
+android: 0.21595564727687955,1.0,0.8,0.8,115145
+annotations: 0.7675537861719127,1.0,1.0,0.8,571407
+ant: 0.43184536834250326,0.0,0.4,0.5,256618
+apache: 0.5285714285714286,1.0,0.2,0.3,685641
+applet: 0.6694937176644492,1.0,0.8,0.4,418556
+arraylist: 0.4341128185059238,1.0,1.0,0.6,1221571
+arrays: 0.22465667001814482,1.0,0.4,0.3,22656
+awt: 0.6525769293224536,1.0,0.8,0.7,418556
+c#: 0.12883518248720469,0.0,0.2,0.2,57695
+c++: 0.09610565232771652,0.0,0.2,0.1,57695
+class: 0.44880200576949725,1.0,0.6,0.6,22656
+collections: 0.3741910625331287,1.0,0.8,0.5,203907
+concurrency: 0.3021020925125573,1.0,0.4,0.4,992484
+database: 0.48292209355694726,1.0,0.4,0.6,571407
+date: 0.685109065556047,1.0,1.0,0.5,22656
+design-patterns: 0.4302525252525253,1.0,0.6,0.3,157882
+eclipse: 0.3203721146349593,1.0,0.6,0.6,2670892
+encryption: 0.6515268022340699,1.0,0.8,0.6,589259
+exception: 0.5805087209252249,1.0,0.6,0.4,571407
+file-io: 0.7042938542938543,1.0,0.8,0.6,157882
+file: 0.41823715031118686,1.0,0.4,0.3,22656
+generics: 0.492188649941626,1.0,0.8,0.8,22656
+google-app-engine: 0.48125390112162475,1.0,0.6,0.8,12030
+gwt: 0.7046162699235261,1.0,0.8,0.8,116472
+hadoop: 0.574823877191818,1.0,0.8,0.7,614157
+hashmap: 0.40143859682197386,1.0,0.2,0.5,22656
+hibernate: 0.5578023755829521,1.0,1.0,1.0,70604
+html: 0.47044871894811885,1.0,0.6,0.5,157882
+http: 0.17086120171690844,0.0,0.2,0.2,230513
+image: 0.5757702336649705,0.0,0.6,0.5,131872
+inheritance: 0.46390966669711126,1.0,0.8,0.6,571407
+intellij-idea: 0.4948260073260073,1.0,0.6,0.4,104891
+io: 0.2354936274140585,0.0,0.4,0.3,157882
+jar: 0.46590808928302246,1.0,0.6,0.4,22656
+java-ee: 0.311762802224108,1.0,0.6,0.6,157882
+java: 0.044082027974578754,0.0,0.2,0.3,301607
+javafx: 0.6024803514651038,1.0,1.0,0.7,1155209
+javascript: 0.40325292965074055,1.0,0.6,0.3,157882
+jaxb: 0.39190040545358146,1.0,0.6,0.3,383861
+jboss: 0.8993055555555556,1.0,1.0,0.7,21234
+jdbc: 0.48918401497089453,1.0,0.8,0.8,157882
+jersey: 0.6663627070603814,1.0,0.8,0.5,950199
+jframe: 0.6812386132515801,1.0,0.8,0.8,522444
+jni: 0.3074251083348179,0.0,0.2,0.4,57695
+jpa: 0.6021880675996703,1.0,0.6,0.7,70604
+jpanel: 0.731432695916055,1.0,0.8,0.7,522444
+jquery: 0.6936936936936937,1.0,0.4,0.2,157882
+jsf: 0.7780433338089329,1.0,1.0,1.0,157882
+json: 0.58159830441471,1.0,0.8,0.9,438154
+jsp: 0.5439591983898517,1.0,1.0,0.7,157882
+jtable: 0.6259754146272766,0.0,0.6,0.7,714968
+junit: 0.42247492497928024,1.0,0.2,0.6,1836
+jvm: 0.4906448166528812,1.0,0.4,0.5,139985
+libgdx: 0.7330608963609347,1.0,1.0,0.9,960524
+linux: 0.01703676289168517,0.0,0.0,0.0,139985
+list: 0.5867840108970015,1.0,0.8,0.7,571407
+log4j: 0.30980392156862746,0.0,0.4,0.3,1446916
+logging: 0.3528958179620689,0.0,0.6,0.4,139985
+loops: 0.4127314814814815,0.0,0.4,0.4,57695
+maven: 0.45180350226503924,1.0,0.8,0.6,70604
+methods: 0.3424816987731308,0.0,0.4,0.5,571407
+multithreading: 0.08121586421543876,1.0,0.2,0.1,157882
+mysql: 0.3662770489247669,1.0,0.6,0.6,157882
+netbeans: 0.6247159374626796,1.0,1.0,1.0,230513
+nullpointerexception: 0.5652047182855794,1.0,0.8,0.6,22656
+object: 0.4688833275258256,0.0,0.8,0.5,57695
+oop: 0.2272627639104361,1.0,0.4,0.2,522444
+oracle: 0.18981964515262964,0.0,0.2,0.2,139985
+osx: 0.08376068376068375,0.0,0.2,0.1,151019
+parsing: 0.3155938374131758,1.0,0.4,0.2,22656
+performance: 0.36675157381799584,0.0,0.6,0.5,57695
+php: 0.6095238095238095,1.0,0.4,0.3,157882
+python: 0.39999999999999997,0.0,0.4,0.3,12030
+reflection: 0.48062324213650065,1.0,0.6,0.7,57695
+regex: 0.5401582360112218,1.0,0.8,0.8,548225
+rest: 0.10230004894536267,0.0,0.2,0.2,37213
+scala: 0.4535122640532145,0.0,0.6,0.5,53013
+security: 0.35227035606292567,1.0,0.2,0.4,418556
+selenium: 0.5409784709587068,1.0,0.8,0.5,1273080
+serialization: 0.44820492694119063,0.0,0.6,0.6,207421
+servlets: 0.32042048646691146,1.0,0.6,0.6,157882
+soap: 0.5,0.0,0.2,0.1,37213
+sockets: 0.23501519589154787,0.0,0.4,0.4,207421
+sorting: 0.25135980292916205,0.0,0.2,0.3,131872
+spring-mvc: 0.5458015061602023,1.0,0.8,0.9,203907
+spring-security: 0.6604487754697839,1.0,0.6,0.6,280244
+spring: 0.4986667696791215,1.0,0.8,0.9,21234
+sql: 0.6552086032879828,1.0,1.0,0.8,157882
+sqlite: 0.7020963270963271,1.0,0.8,0.4,11654
+string: 0.22814214214870532,1.0,0.4,0.3,22656
+struts2: 0.9263455988455987,1.0,0.8,0.9,573032
+swing: 0.3212096255115916,1.0,0.6,0.8,522444
+swt: 0.5085243231972368,1.0,0.8,0.5,1449199
+tomcat: 0.5347083959032791,1.0,0.6,0.6,157882
+unit-testing: 0.5674848362973207,1.0,0.8,0.5,70604
+user-interface: 0.1440481636120427,1.0,0.4,0.3,571407
+web-services: 0.32468711612019086,0.0,0.4,0.4,37213
+windows: 0.1111111111111111,0.0,0.0,0.1,57695
+xml: 0.3631821081054824,1.0,0.6,0.5,383861
+EvalResult{tag=struts2, map=0.9263455988455987, p1=1.0, p10=0.9}
+EvalResult{tag=jboss, map=0.8993055555555556, p1=1.0, p10=0.7}
+EvalResult{tag=jsf, map=0.7780433338089329, p1=1.0, p10=1.0}
+EvalResult{tag=annotations, map=0.7675537861719127, p1=1.0, p10=0.8}
+EvalResult{tag=libgdx, map=0.7330608963609347, p1=1.0, p10=0.9}
+EvalResult{tag=jpanel, map=0.731432695916055, p1=1.0, p10=0.7}
+EvalResult{tag=gwt, map=0.7046162699235261, p1=1.0, p10=0.8}
+EvalResult{tag=file-io, map=0.7042938542938543, p1=1.0, p10=0.6}
+EvalResult{tag=sqlite, map=0.7020963270963271, p1=1.0, p10=0.4}
+EvalResult{tag=jquery, map=0.6936936936936937, p1=1.0, p10=0.2}
+EvalResult{tag=date, map=0.685109065556047, p1=1.0, p10=0.5}
+EvalResult{tag=jframe, map=0.6812386132515801, p1=1.0, p10=0.8}
+EvalResult{tag=applet, map=0.6694937176644492, p1=1.0, p10=0.4}
+EvalResult{tag=jersey, map=0.6663627070603814, p1=1.0, p10=0.5}
+EvalResult{tag=spring-security, map=0.6604487754697839, p1=1.0, p10=0.6}
+EvalResult{tag=sql, map=0.6552086032879828, p1=1.0, p10=0.8}
+EvalResult{tag=awt, map=0.6525769293224536, p1=1.0, p10=0.7}
+EvalResult{tag=encryption, map=0.6515268022340699, p1=1.0, p10=0.6}
+EvalResult{tag=jtable, map=0.6259754146272766, p1=0.0, p10=0.7}
+EvalResult{tag=netbeans, map=0.6247159374626796, p1=1.0, p10=1.0}
+EvalResult{tag=php, map=0.6095238095238095, p1=1.0, p10=0.3}
+EvalResult{tag=javafx, map=0.6024803514651038, p1=1.0, p10=0.7}
+EvalResult{tag=jpa, map=0.6021880675996703, p1=1.0, p10=0.7}
+EvalResult{tag=list, map=0.5867840108970015, p1=1.0, p10=0.7}
+EvalResult{tag=json, map=0.58159830441471, p1=1.0, p10=0.9}
+EvalResult{tag=exception, map=0.5805087209252249, p1=1.0, p10=0.4}
+EvalResult{tag=image, map=0.5757702336649705, p1=0.0, p10=0.5}
+EvalResult{tag=hadoop, map=0.574823877191818, p1=1.0, p10=0.7}
+EvalResult{tag=unit-testing, map=0.5674848362973207, p1=1.0, p10=0.5}
+EvalResult{tag=nullpointerexception, map=0.5652047182855794, p1=1.0, p10=0.6}
+EvalResult{tag=hibernate, map=0.5578023755829521, p1=1.0, p10=1.0}
+EvalResult{tag=spring-mvc, map=0.5458015061602023, p1=1.0, p10=0.9}
+EvalResult{tag=jsp, map=0.5439591983898517, p1=1.0, p10=0.7}
+EvalResult{tag=selenium, map=0.5409784709587068, p1=1.0, p10=0.5}
+EvalResult{tag=regex, map=0.5401582360112218, p1=1.0, p10=0.8}
+EvalResult{tag=tomcat, map=0.5347083959032791, p1=1.0, p10=0.6}
+EvalResult{tag=apache, map=0.5285714285714286, p1=1.0, p10=0.3}
+EvalResult{tag=swt, map=0.5085243231972368, p1=1.0, p10=0.5}
+EvalResult{tag=soap, map=0.5, p1=0.0, p10=0.1}
+EvalResult{tag=spring, map=0.4986667696791215, p1=1.0, p10=0.9}
+EvalResult{tag=intellij-idea, map=0.4948260073260073, p1=1.0, p10=0.4}
+EvalResult{tag=generics, map=0.492188649941626, p1=1.0, p10=0.8}
+EvalResult{tag=jvm, map=0.4906448166528812, p1=1.0, p10=0.5}
+EvalResult{tag=jdbc, map=0.48918401497089453, p1=1.0, p10=0.8}
+EvalResult{tag=database, map=0.48292209355694726, p1=1.0, p10=0.6}
+EvalResult{tag=google-app-engine, map=0.48125390112162475, p1=1.0, p10=0.8}
+EvalResult{tag=reflection, map=0.48062324213650065, p1=1.0, p10=0.7}
+EvalResult{tag=html, map=0.47044871894811885, p1=1.0, p10=0.5}
+EvalResult{tag=object, map=0.4688833275258256, p1=0.0, p10=0.5}
+EvalResult{tag=jar, map=0.46590808928302246, p1=1.0, p10=0.4}
+EvalResult{tag=inheritance, map=0.46390966669711126, p1=1.0, p10=0.6}
+EvalResult{tag=scala, map=0.4535122640532145, p1=0.0, p10=0.5}
+EvalResult{tag=maven, map=0.45180350226503924, p1=1.0, p10=0.6}
+EvalResult{tag=class, map=0.44880200576949725, p1=1.0, p10=0.6}
+EvalResult{tag=serialization, map=0.44820492694119063, p1=0.0, p10=0.6}
+EvalResult{tag=arraylist, map=0.4341128185059238, p1=1.0, p10=0.6}
+EvalResult{tag=ant, map=0.43184536834250326, p1=0.0, p10=0.5}
+EvalResult{tag=design-patterns, map=0.4302525252525253, p1=1.0, p10=0.3}
+EvalResult{tag=junit, map=0.42247492497928024, p1=1.0, p10=0.6}
+EvalResult{tag=file, map=0.41823715031118686, p1=1.0, p10=0.3}
+EvalResult{tag=loops, map=0.4127314814814815, p1=0.0, p10=0.4}
+EvalResult{tag=javascript, map=0.40325292965074055, p1=1.0, p10=0.3}
+EvalResult{tag=hashmap, map=0.40143859682197386, p1=1.0, p10=0.5}
+EvalResult{tag=python, map=0.39999999999999997, p1=0.0, p10=0.3}
+EvalResult{tag=jaxb, map=0.39190040545358146, p1=1.0, p10=0.3}
+EvalResult{tag=collections, map=0.3741910625331287, p1=1.0, p10=0.5}
+EvalResult{tag=performance, map=0.36675157381799584, p1=0.0, p10=0.5}
+EvalResult{tag=mysql, map=0.3662770489247669, p1=1.0, p10=0.6}
+EvalResult{tag=xml, map=0.3631821081054824, p1=1.0, p10=0.5}
+EvalResult{tag=logging, map=0.3528958179620689, p1=0.0, p10=0.4}
+EvalResult{tag=security, map=0.35227035606292567, p1=1.0, p10=0.4}
+EvalResult{tag=methods, map=0.3424816987731308, p1=0.0, p10=0.5}
+EvalResult{tag=web-services, map=0.32468711612019086, p1=0.0, p10=0.4}
+EvalResult{tag=swing, map=0.3212096255115916, p1=1.0, p10=0.8}
+EvalResult{tag=servlets, map=0.32042048646691146, p1=1.0, p10=0.6}
+EvalResult{tag=eclipse, map=0.3203721146349593, p1=1.0, p10=0.6}
+EvalResult{tag=parsing, map=0.3155938374131758, p1=1.0, p10=0.2}
+EvalResult{tag=java-ee, map=0.311762802224108, p1=1.0, p10=0.6}
+EvalResult{tag=log4j, map=0.30980392156862746, p1=0.0, p10=0.3}
+EvalResult{tag=jni, map=0.3074251083348179, p1=0.0, p10=0.4}
+EvalResult{tag=concurrency, map=0.3021020925125573, p1=1.0, p10=0.4}
+EvalResult{tag=sorting, map=0.25135980292916205, p1=0.0, p10=0.3}
+EvalResult{tag=io, map=0.2354936274140585, p1=0.0, p10=0.3}
+EvalResult{tag=sockets, map=0.23501519589154787, p1=0.0, p10=0.4}
+EvalResult{tag=string, map=0.22814214214870532, p1=1.0, p10=0.3}
+EvalResult{tag=oop, map=0.2272627639104361, p1=1.0, p10=0.2}
+EvalResult{tag=arrays, map=0.22465667001814482, p1=1.0, p10=0.3}
+EvalResult{tag=algorithm, map=0.2184573847887817, p1=0.0, p10=0.4}
+EvalResult{tag=android, map=0.21595564727687955, p1=1.0, p10=0.8}
+EvalResult{tag=oracle, map=0.18981964515262964, p1=0.0, p10=0.2}
+EvalResult{tag=http, map=0.17086120171690844, p1=0.0, p10=0.2}
+EvalResult{tag=user-interface, map=0.1440481636120427, p1=1.0, p10=0.3}
+EvalResult{tag=c#, map=0.12883518248720469, p1=0.0, p10=0.2}
+EvalResult{tag=windows, map=0.1111111111111111, p1=0.0, p10=0.1}
+EvalResult{tag=rest, map=0.10230004894536267, p1=0.0, p10=0.2}
+EvalResult{tag=c++, map=0.09610565232771652, p1=0.0, p10=0.1}
+EvalResult{tag=osx, map=0.08376068376068375, p1=0.0, p10=0.1}
+EvalResult{tag=multithreading, map=0.08121586421543876, p1=1.0, p10=0.1}
+EvalResult{tag=java, map=0.044082027974578754, p1=0.0, p10=0.3}
+EvalResult{tag=linux, map=0.01703676289168517, p1=0.0, p10=0.0}
+Avg Map: 0.4494494398985053

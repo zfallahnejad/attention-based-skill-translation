@@ -504,10 +504,20 @@ public class MainForm extends javax.swing.JFrame
         {
 //            new Balog().balog1("android",true,null);
             new Balog().balog1ForAllTags("java");
-//            new Balog().balog1ForAllTags("php");
+            //new Balog().balog1ForAllTags("php");
 
-            //new Balog().balog1ForAllTagsVoteshare("java");
-            //new Balog().balog1ForAllTagsVoteshare("php");
+            //new Balog().balog1ForAllTagsVoteshare("java", "./data/java_vote_share.csv", "./log_balog1_without_voteshare_java.txt");
+            //new Balog().balog1ForAllTagsVoteshare("php", "./data/php_vote_share.csv", "./log_balog1_without_voteshare_php.txt");
+
+            //new Balog().balog1ForAllTagsVoteshare("java", "./data/java_vote_share.csv", "./log_balog1_voteshare_java_nobari.txt");
+            //new Balog().balog1ForAllTagsVoteshare("java", "D:/Sharif/Research_Projects/astm/evaluate/VoteShare/java/java_vote_share_v3.csv", "./log_balog1_voteshare_java_v3.txt");
+            //new Balog().balog1ForAllTagsVoteshare("java", "D:/Sharif/Research_Projects/astm/evaluate/VoteShare/java/java_vote_share_v4.csv", "./log_balog1_voteshare_java_v4.txt");
+            //new Balog().balog1ForAllTagsVoteshare("java", "D:/Sharif/Research_Projects/astm/evaluate/VoteShare/java/java_vote_share_v5.csv", "./log_balog1_voteshare_java_v5.txt");
+
+            //new Balog().balog1ForAllTagsVoteshare("php", "./data/php_vote_share.csv", "./log_balog1_voteshare_php_nobari.txt");
+            //new Balog().balog1ForAllTagsVoteshare("php", "D:/Sharif/Research_Projects/astm/evaluate/VoteShare/php/php_vote_share_v3.csv", "./log_balog1_voteshare_php_v3.txt");
+            //new Balog().balog1ForAllTagsVoteshare("php", "D:/Sharif/Research_Projects/astm/evaluate/VoteShare/php/php_vote_share_v4.csv", "./log_balog1_voteshare_php_v4.txt");
+            //new Balog().balog1ForAllTagsVoteshare("php", "D:/Sharif/Research_Projects/astm/evaluate/VoteShare/php/php_vote_share_v5.csv", "./log_balog1_voteshare_php_v5.txt");
         }
         catch (IOException ex)
         {
@@ -575,10 +585,20 @@ public class MainForm extends javax.swing.JFrame
         {
 //            new Balog().balog2("libgdx",true,null,10000,null,0.5);
             new Balog().balog2ForAllTags("java");
-//            new Balog().balog2ForAllTags("php");
+            //new Balog().balog2ForAllTags("php");
 
-            //new Balog().balog2ForAllTagsVoteshare("java");
-            //new Balog().balog2ForAllTagsVoteshare("php");
+            //new Balog().balog2ForAllTagsVoteshare("java", "./data/java_vote_share.csv", "./log_balog2_without_voteshare_java.txt");
+            //new Balog().balog2ForAllTagsVoteshare("php", "./data/php_vote_share.csv", "./log_balog2_without_voteshare_php.txt");
+
+            //new Balog().balog2ForAllTagsVoteshare("java", "./data/java_vote_share.csv", "./log_balog2_voteshare_java_nobari.txt");
+            //new Balog().balog2ForAllTagsVoteshare("java", "D:/Sharif/Research_Projects/astm/evaluate/VoteShare/java/java_vote_share_v3.csv", "./log_balog2_voteshare_java_v3.txt");
+            //new Balog().balog2ForAllTagsVoteshare("java", "D:/Sharif/Research_Projects/astm/evaluate/VoteShare/java/java_vote_share_v4.csv", "./log_balog2_voteshare_java_v4.txt");
+            //new Balog().balog2ForAllTagsVoteshare("java", "D:/Sharif/Research_Projects/astm/evaluate/VoteShare/java/java_vote_share_v5.csv", "./log_balog2_voteshare_java_v5.txt");
+
+            //new Balog().balog2ForAllTagsVoteshare("php", "./data/php_vote_share.csv", "./log_balog2_voteshare_php_nobari.txt");
+            //new Balog().balog2ForAllTagsVoteshare("php", "D:/Sharif/Research_Projects/astm/evaluate/VoteShare/php/php_vote_share_v3.csv", "./log_balog2_voteshare_php_v3.txt");
+            //new Balog().balog2ForAllTagsVoteshare("php", "D:/Sharif/Research_Projects/astm/evaluate/VoteShare/php/php_vote_share_v4.csv", "./log_balog2_voteshare_php_v4.txt");
+            //new Balog().balog2ForAllTagsVoteshare("php", "D:/Sharif/Research_Projects/astm/evaluate/VoteShare/php/php_vote_share_v5.csv", "./log_balog2_voteshare_php_v5.txt");
         }
         catch (IOException ex)
         {
