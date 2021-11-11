@@ -1,4 +1,4 @@
-## 1. extract `VoteShare.rar` file
+## 1. extract `rar` file inside Voteshare/java and Voteshare/php directories.
 * Voteshare1 = vote / sum of vote scores in the thread 
 * Voteshare2 produce same value as nobari = vote / sum of positive vote scores in the thread  
 * Voteshare3 apply min max normalization to votes
