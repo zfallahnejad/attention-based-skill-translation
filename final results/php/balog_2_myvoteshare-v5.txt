@@ -1,0 +1,205 @@
+"C:\Program Files\Java\jdk1.8.0_162\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.3.2\lib\idea_rt.jar=56665:C:\Program Files\JetBrains\IntelliJ IDEA 2019.3.2\bin" -Dfile.encoding=UTF-8 -classpath "C:\Program Files\Java\jdk1.8.0_162\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\deploy.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\ext\cldrdata.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\ext\jaccess.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\ext\jfxrt.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\ext\localedata.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\ext\nashorn.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\ext\sunec.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\ext\sunmscapi.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\ext\zipfs.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\javaws.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\jfxswt.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\management-agent.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\plugin.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_162\jre\lib\rt.jar;D:\Sharif\Research_Projects\sof-expert-finding-master\out\production\sof-expert-finding-master;D:\Sharif\Research_Projects\sof-expert-finding-master\lib\jdatepicker-1.3.4.jar;D:\Sharif\Research_Projects\sof-expert-finding-master\lib\jsoup-1.10.1.jar;D:\Sharif\Research_Projects\sof-expert-finding-master\lib\lucene-analyzers-common-6.2.1.jar;D:\Sharif\Research_Projects\sof-expert-finding-master\lib\lucene-core-6.2.1.jar;D:\Sharif\Research_Projects\sof-expert-finding-master\lib\lucene-queries-6.2.1.jar;D:\Sharif\Research_Projects\sof-expert-finding-master\lib\lucene-queryparser-6.2.1.jar" lucenesearch.Program
+Loading voteshares
+Loading voteshare done
+tag:map,p@1,p@5,p@10,TopUser
+php:0.059511837301853755,1.0,0.6,0.8,548225
+mysql:0.09865968281846521,0.0,0.4,0.5,118068
+javascript:0.1023921104864481,0.0,0.4,0.3,19068
+html:0.16973599679201976,0.0,0.4,0.5,19068
+jquery:0.09374797990037322,0.0,0.2,0.5,139459
+arrays:0.2710302951801877,1.0,0.8,0.7,1491895
+ajax:0.1462582942533259,0.0,0.4,0.5,19068
+wordpress:0.26011753056648107,0.0,0.8,0.6,85385
+sql:0.1998451861338286,0.0,0.6,0.6,285587
+codeigniter:0.3378974909582795,1.0,1.0,0.7,124378
+regex:0.41350898754336396,1.0,1.0,0.9,548225
+forms:0.09311789657154215,0.0,0.0,0.2,19068
+json:0.46030655813668125,0.0,0.4,0.7,19068
+apache:0.2949687759746171,0.0,0.4,0.6,2310830
+database:0.23279840900091664,1.0,0.4,0.5,476
+.htaccess:0.4462788083474759,1.0,1.0,0.9,548225
+symfony2:0.2999915441000042,1.0,0.6,0.7,814253
+laravel:0.5640771532173634,1.0,1.0,0.9,1959747
+xml:0.5981626134756722,1.0,0.6,0.7,2016456
+zend-framework:0.2849361132570566,1.0,0.6,0.8,208809
+curl:0.3924860940967023,1.0,0.6,0.4,118068
+session:0.4146847573460443,1.0,0.8,0.7,118068
+pdo:0.5931547600681849,0.0,0.8,0.9,285587
+css:0.15894649991302257,1.0,0.4,0.3,548225
+mysqli:0.5177528726860667,0.0,0.6,0.7,285587
+facebook:0.5937425176857909,1.0,0.8,0.7,757508
+cakephp:0.4599411460136285,1.0,1.0,0.9,171209
+email:0.2257055589470933,1.0,0.6,0.4,1415724
+magento:0.3648495120927007,1.0,1.0,0.7,4668
+yii:0.5791010896657492,1.0,0.6,0.8,713916
+laravel-4:0.16351156030204542,0.0,0.4,0.2,1914161
+oop:0.18189016067243569,0.0,0.8,0.5,285587
+string:0.4202690229008861,1.0,0.6,0.6,1226894
+post:0.23644260336744696,1.0,0.6,0.3,118068
+image:0.6011006289073059,1.0,1.0,0.6,118068
+function:0.285592610767146,1.0,0.6,0.4,476
+variables:0.3726919700857309,1.0,0.6,0.6,476
+api:0.13113395997992688,0.0,0.0,0.2,1188826
+date:0.5118850556329674,1.0,0.8,0.7,250259
+mod-rewrite:0.048857161093675584,0.0,0.0,0.1,1063330
+android:0.1312068377624664,1.0,0.2,0.1,115145
+security:0.21756502345870835,1.0,0.4,0.3,187606
+foreach:0.4112910798190514,1.0,0.6,0.6,1491895
+multidimensional-array:0.058762847525337156,0.0,0.0,0.1,2305490
+redirect:0.33799910179220527,1.0,0.4,0.3,851273
+url:0.14762560883707146,0.0,0.2,0.2,476
+class:0.5072531700970497,1.0,1.0,0.7,476
+validation:0.4596054077098647,1.0,0.8,0.5,1317935
+java:0.42715038584603804,1.0,0.2,0.4,157882
+doctrine2:0.1732787460085317,1.0,0.6,0.5,347063
+linux:0.4515378118980235,1.0,0.6,0.6,187606
+file-upload:0.2063418186819727,0.0,0.6,0.3,118068
+joomla:0.46965215112894326,1.0,0.8,0.4,1362108
+cookies:0.385757082615345,1.0,0.4,0.3,476
+loops:0.3258939743762717,1.0,0.4,0.4,118068
+facebook-graph-api:0.13485300986756368,0.0,0.2,0.2,1235933
+file:0.43288016011159036,1.0,0.4,0.4,118068
+drupal:0.6330742577835601,1.0,1.0,0.6,830680
+soap:0.4208333333333333,0.0,0.6,0.3,1627406
+datetime:0.5158142601247332,1.0,0.8,0.6,250259
+login:0.048303548303548306,0.0,0.0,0.0,569976
+preg-replace:0.07496006943399362,1.0,0.2,0.1,507674
+parsing:0.43009200546984294,1.0,1.0,0.6,476
+csv:0.4255535521092939,1.0,0.6,0.5,324584
+if-statement:0.21118916484685982,0.0,0.4,0.2,285587
+zend-framework2:0.1601504940338981,0.0,0.2,0.1,2067129
+html5:0.0017574692442882249,0.0,0.0,0.0,19068
+upload:0.2919117647058823,0.0,0.4,0.2,118068
+paypal:0.45288538216169794,0.0,0.6,0.3,1188826
+preg-match:0.10900852281444613,1.0,0.2,0.2,507674
+sorting:0.3103485161452252,1.0,0.8,0.5,118068
+phpmyadmin:0.12705690297940514,0.0,0.2,0.1,2693568
+search:0.2957240077929733,0.0,0.4,0.2,548225
+get:0.16268616928331747,0.0,0.2,0.2,741747
+sql-server:0.3914392812623849,1.0,0.4,0.3,105929
+doctrine:0.662054967568446,1.0,1.0,0.9,347063
+performance:0.2425907394181022,0.0,0.2,0.4,285587
+web-services:0.006167014895194447,0.0,0.0,0.0,463544
+table:0.16881578947368422,0.0,0.2,0.2,1144035
+pdf:0.5333333333333333,0.0,0.6,0.3,3325375
+utf-8:0.7556414818827206,1.0,1.0,0.8,476
+simplexml:0.6270243552542556,1.0,1.0,0.9,367456
+object:0.5592657124265284,1.0,0.6,0.7,476
+phpunit:0.5036207839779269,1.0,0.8,0.6,285578
+mongodb:0.5105562697817693,1.0,0.8,0.6,162228
+dom:0.5232722364195905,1.0,0.8,0.7,2265374
+select:0.6101353051044089,1.0,0.6,0.5,1144035
+http:0.20512461357044567,0.0,0.4,0.2,208809
+include:0.35197811447811445,0.0,0.4,0.4,118068
+authentication:0.05836134453781513,0.0,0.2,0.1,19068
+caching:0.4169532434650751,1.0,0.4,0.4,187606
+cron:0.1252962723550959,0.0,0.2,0.1,19068
+pagination:0.25170648464163825,0.0,0.2,0.1,285587
+xampp:0.0,0.0,0.0,0.0,4833
+twitter:0.5486533492347446,1.0,0.6,0.4,1902010
+python:0.14386792452830188,0.0,0.2,0.1,20862
+rest:0.2501713208840158,0.0,0.2,0.1,118068
+encryption:0.402369570731407,1.0,0.6,0.3,589259
+wordpress-plugin:0.07241973618733746,0.0,0.2,0.1,1094510
+gd:0.5167132938531772,1.0,0.8,0.4,118068
+EvalResult{tag=utf-8, map=0.7556414818827206, p1=1.0, p10=0.8}
+EvalResult{tag=doctrine, map=0.662054967568446, p1=1.0, p10=0.9}
+EvalResult{tag=drupal, map=0.6330742577835601, p1=1.0, p10=0.6}
+EvalResult{tag=simplexml, map=0.6270243552542556, p1=1.0, p10=0.9}
+EvalResult{tag=select, map=0.6101353051044089, p1=1.0, p10=0.5}
+EvalResult{tag=image, map=0.6011006289073059, p1=1.0, p10=0.6}
+EvalResult{tag=xml, map=0.5981626134756722, p1=1.0, p10=0.7}
+EvalResult{tag=facebook, map=0.5937425176857909, p1=1.0, p10=0.7}
+EvalResult{tag=pdo, map=0.5931547600681849, p1=0.0, p10=0.9}
+EvalResult{tag=yii, map=0.5791010896657492, p1=1.0, p10=0.8}
+EvalResult{tag=laravel, map=0.5640771532173634, p1=1.0, p10=0.9}
+EvalResult{tag=object, map=0.5592657124265284, p1=1.0, p10=0.7}
+EvalResult{tag=twitter, map=0.5486533492347446, p1=1.0, p10=0.4}
+EvalResult{tag=pdf, map=0.5333333333333333, p1=0.0, p10=0.3}
+EvalResult{tag=dom, map=0.5232722364195905, p1=1.0, p10=0.7}
+EvalResult{tag=mysqli, map=0.5177528726860667, p1=0.0, p10=0.7}
+EvalResult{tag=gd, map=0.5167132938531772, p1=1.0, p10=0.4}
+EvalResult{tag=datetime, map=0.5158142601247332, p1=1.0, p10=0.6}
+EvalResult{tag=date, map=0.5118850556329674, p1=1.0, p10=0.7}
+EvalResult{tag=mongodb, map=0.5105562697817693, p1=1.0, p10=0.6}
+EvalResult{tag=class, map=0.5072531700970497, p1=1.0, p10=0.7}
+EvalResult{tag=phpunit, map=0.5036207839779269, p1=1.0, p10=0.6}
+EvalResult{tag=joomla, map=0.46965215112894326, p1=1.0, p10=0.4}
+EvalResult{tag=json, map=0.46030655813668125, p1=0.0, p10=0.7}
+EvalResult{tag=cakephp, map=0.4599411460136285, p1=1.0, p10=0.9}
+EvalResult{tag=validation, map=0.4596054077098647, p1=1.0, p10=0.5}
+EvalResult{tag=paypal, map=0.45288538216169794, p1=0.0, p10=0.3}
+EvalResult{tag=linux, map=0.4515378118980235, p1=1.0, p10=0.6}
+EvalResult{tag=.htaccess, map=0.4462788083474759, p1=1.0, p10=0.9}
+EvalResult{tag=file, map=0.43288016011159036, p1=1.0, p10=0.4}
+EvalResult{tag=parsing, map=0.43009200546984294, p1=1.0, p10=0.6}
+EvalResult{tag=java, map=0.42715038584603804, p1=1.0, p10=0.4}
+EvalResult{tag=csv, map=0.4255535521092939, p1=1.0, p10=0.5}
+EvalResult{tag=soap, map=0.4208333333333333, p1=0.0, p10=0.3}
+EvalResult{tag=string, map=0.4202690229008861, p1=1.0, p10=0.6}
+EvalResult{tag=caching, map=0.4169532434650751, p1=1.0, p10=0.4}
+EvalResult{tag=session, map=0.4146847573460443, p1=1.0, p10=0.7}
+EvalResult{tag=regex, map=0.41350898754336396, p1=1.0, p10=0.9}
+EvalResult{tag=foreach, map=0.4112910798190514, p1=1.0, p10=0.6}
+EvalResult{tag=encryption, map=0.402369570731407, p1=1.0, p10=0.3}
+EvalResult{tag=curl, map=0.3924860940967023, p1=1.0, p10=0.4}
+EvalResult{tag=sql-server, map=0.3914392812623849, p1=1.0, p10=0.3}
+EvalResult{tag=cookies, map=0.385757082615345, p1=1.0, p10=0.3}
+EvalResult{tag=variables, map=0.3726919700857309, p1=1.0, p10=0.6}
+EvalResult{tag=magento, map=0.3648495120927007, p1=1.0, p10=0.7}
+EvalResult{tag=include, map=0.35197811447811445, p1=0.0, p10=0.4}
+EvalResult{tag=redirect, map=0.33799910179220527, p1=1.0, p10=0.3}
+EvalResult{tag=codeigniter, map=0.3378974909582795, p1=1.0, p10=0.7}
+EvalResult{tag=loops, map=0.3258939743762717, p1=1.0, p10=0.4}
+EvalResult{tag=sorting, map=0.3103485161452252, p1=1.0, p10=0.5}
+EvalResult{tag=symfony2, map=0.2999915441000042, p1=1.0, p10=0.7}
+EvalResult{tag=search, map=0.2957240077929733, p1=0.0, p10=0.2}
+EvalResult{tag=apache, map=0.2949687759746171, p1=0.0, p10=0.6}
+EvalResult{tag=upload, map=0.2919117647058823, p1=0.0, p10=0.2}
+EvalResult{tag=function, map=0.285592610767146, p1=1.0, p10=0.4}
+EvalResult{tag=zend-framework, map=0.2849361132570566, p1=1.0, p10=0.8}
+EvalResult{tag=arrays, map=0.2710302951801877, p1=1.0, p10=0.7}
+EvalResult{tag=wordpress, map=0.26011753056648107, p1=0.0, p10=0.6}
+EvalResult{tag=pagination, map=0.25170648464163825, p1=0.0, p10=0.1}
+EvalResult{tag=rest, map=0.2501713208840158, p1=0.0, p10=0.1}
+EvalResult{tag=performance, map=0.2425907394181022, p1=0.0, p10=0.4}
+EvalResult{tag=post, map=0.23644260336744696, p1=1.0, p10=0.3}
+EvalResult{tag=database, map=0.23279840900091664, p1=1.0, p10=0.5}
+EvalResult{tag=email, map=0.2257055589470933, p1=1.0, p10=0.4}
+EvalResult{tag=security, map=0.21756502345870835, p1=1.0, p10=0.3}
+EvalResult{tag=if-statement, map=0.21118916484685982, p1=0.0, p10=0.2}
+EvalResult{tag=file-upload, map=0.2063418186819727, p1=0.0, p10=0.3}
+EvalResult{tag=http, map=0.20512461357044567, p1=0.0, p10=0.2}
+EvalResult{tag=sql, map=0.1998451861338286, p1=0.0, p10=0.6}
+EvalResult{tag=oop, map=0.18189016067243569, p1=0.0, p10=0.5}
+EvalResult{tag=doctrine2, map=0.1732787460085317, p1=1.0, p10=0.5}
+EvalResult{tag=html, map=0.16973599679201976, p1=0.0, p10=0.5}
+EvalResult{tag=table, map=0.16881578947368422, p1=0.0, p10=0.2}
+EvalResult{tag=laravel-4, map=0.16351156030204542, p1=0.0, p10=0.2}
+EvalResult{tag=get, map=0.16268616928331747, p1=0.0, p10=0.2}
+EvalResult{tag=zend-framework2, map=0.1601504940338981, p1=0.0, p10=0.1}
+EvalResult{tag=css, map=0.15894649991302257, p1=1.0, p10=0.3}
+EvalResult{tag=url, map=0.14762560883707146, p1=0.0, p10=0.2}
+EvalResult{tag=ajax, map=0.1462582942533259, p1=0.0, p10=0.5}
+EvalResult{tag=python, map=0.14386792452830188, p1=0.0, p10=0.1}
+EvalResult{tag=facebook-graph-api, map=0.13485300986756368, p1=0.0, p10=0.2}
+EvalResult{tag=android, map=0.1312068377624664, p1=1.0, p10=0.1}
+EvalResult{tag=api, map=0.13113395997992688, p1=0.0, p10=0.2}
+EvalResult{tag=phpmyadmin, map=0.12705690297940514, p1=0.0, p10=0.1}
+EvalResult{tag=cron, map=0.1252962723550959, p1=0.0, p10=0.1}
+EvalResult{tag=preg-match, map=0.10900852281444613, p1=1.0, p10=0.2}
+EvalResult{tag=javascript, map=0.1023921104864481, p1=0.0, p10=0.3}
+EvalResult{tag=mysql, map=0.09865968281846521, p1=0.0, p10=0.5}
+EvalResult{tag=jquery, map=0.09374797990037322, p1=0.0, p10=0.5}
+EvalResult{tag=forms, map=0.09311789657154215, p1=0.0, p10=0.2}
+EvalResult{tag=preg-replace, map=0.07496006943399362, p1=1.0, p10=0.1}
+EvalResult{tag=wordpress-plugin, map=0.07241973618733746, p1=0.0, p10=0.1}
+EvalResult{tag=php, map=0.059511837301853755, p1=1.0, p10=0.8}
+EvalResult{tag=multidimensional-array, map=0.058762847525337156, p1=0.0, p10=0.1}
+EvalResult{tag=authentication, map=0.05836134453781513, p1=0.0, p10=0.1}
+EvalResult{tag=mod-rewrite, map=0.048857161093675584, p1=0.0, p10=0.1}
+EvalResult{tag=login, map=0.048303548303548306, p1=0.0, p10=0.0}
+EvalResult{tag=web-services, map=0.006167014895194447, p1=0.0, p10=0.0}
+EvalResult{tag=html5, map=0.0017574692442882249, p1=0.0, p10=0.0}
+EvalResult{tag=xampp, map=0.0, p1=0.0, p10=0.0}
+Avg Map: 0.32068618983608366
