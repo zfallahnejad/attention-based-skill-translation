@@ -58,21 +58,125 @@ public class Main {
         //voteshare_path = Constants.Voteshare_Directory + "php" + "/" + "php_vote_share_nobari.csv";
         //m.AttentionalSkillTranslation("php", "php_astm2_best", true, 10, "Word", "Test", voteshare_path, outfile_prefix);
 
-        for (int v = 1; v < 6; v++) {
-            // ASTM-1 and ASTM-2 - voteshare scoring - my voteshare version v
-            outfile_prefix = "java_astm1_best" + "_top" + 10 + "_voteshare_v" + v;
-            voteshare_path = Constants.Voteshare_Directory + "java" + "/" + "java_vote_share_v" + v + ".csv";
-            m.AttentionalSkillTranslation("java", "java_astm1_best", true, 10, "Word", "Test", voteshare_path, outfile_prefix);
-            outfile_prefix = "java_astm2_best" + "_top" + 10 + "_voteshare_v" + v;
-            voteshare_path = Constants.Voteshare_Directory + "java" + "/" + "java_vote_share_v" + v + ".csv";
-            m.AttentionalSkillTranslation("java", "java_astm2_best", true, 10, "Word", "Test", voteshare_path, outfile_prefix);
-            outfile_prefix = "php_astm1_best" + "_top" + 10 + "_voteshare_v" + v;
-            voteshare_path = Constants.Voteshare_Directory + "php" + "/" + "php_vote_share_v" + v + ".csv";
-            m.AttentionalSkillTranslation("php", "php_astm1_best", true, 10, "Word", "Test", voteshare_path, outfile_prefix);
-            outfile_prefix = "php_astm2_best" + "_top" + 10 + "_voteshare_v" + v;
-            voteshare_path = Constants.Voteshare_Directory + "php" + "/" + "php_vote_share_v" + v + ".csv";
-            m.AttentionalSkillTranslation("php", "php_astm2_best", true, 10, "Word", "Test", voteshare_path, outfile_prefix);
-        }
+        //for (int v = 1; v < 7; v++) {
+        //    // ASTM-1 and ASTM-2 - voteshare scoring - my voteshare version v
+        //    outfile_prefix = "java_astm1_best" + "_top" + 10 + "_voteshare_v" + v;
+        //    voteshare_path = Constants.Voteshare_Directory + "java" + "/" + "java_vote_share_v" + v + ".csv";
+        //    m.AttentionalSkillTranslation("java", "java_astm1_best", true, 10, "Word", "Test", voteshare_path, outfile_prefix);
+        //    outfile_prefix = "java_astm2_best" + "_top" + 10 + "_voteshare_v" + v;
+        //    voteshare_path = Constants.Voteshare_Directory + "java" + "/" + "java_vote_share_v" + v + ".csv";
+        //    m.AttentionalSkillTranslation("java", "java_astm2_best", true, 10, "Word", "Test", voteshare_path, outfile_prefix);
+        //    outfile_prefix = "php_astm1_best" + "_top" + 10 + "_voteshare_v" + v;
+        //    voteshare_path = Constants.Voteshare_Directory + "php" + "/" + "php_vote_share_v" + v + ".csv";
+        //    m.AttentionalSkillTranslation("php", "php_astm1_best", true, 10, "Word", "Test", voteshare_path, outfile_prefix);
+        //    outfile_prefix = "php_astm2_best" + "_top" + 10 + "_voteshare_v" + v;
+        //    voteshare_path = Constants.Voteshare_Directory + "php" + "/" + "php_vote_share_v" + v + ".csv";
+        //    m.AttentionalSkillTranslation("php", "php_astm2_best", true, 10, "Word", "Test", voteshare_path, outfile_prefix);
+        //}
+
+        //for (int t = 1; t < 5; t++) {
+        //    int top = 2 * t;
+        //    // ASTM-1 and ASTM-2 - binary scoring
+        //
+        //    outfile_prefix = "java_astm1_best" + "_top" + top + "_without_voteshare";
+        //    m.AttentionalSkillTranslation("java", "java_astm1_best", false, top, "Word", "Test", "", outfile_prefix);
+        //    outfile_prefix = "java_astm2_best" + "_top" + top + "_without_voteshare";
+        //    m.AttentionalSkillTranslation("java", "java_astm2_best", false, top, "Word", "Test", "", outfile_prefix);
+        //    outfile_prefix = "php_astm1_best" + "_top" + top + "_without_voteshare";
+        //    m.AttentionalSkillTranslation("php", "php_astm1_best", false, top, "Word", "Test", "", outfile_prefix);
+        //    outfile_prefix = "php_astm2_best" + "_top" + top + "_without_voteshare";
+        //    m.AttentionalSkillTranslation("php", "php_astm2_best", false, top, "Word", "Test", "", outfile_prefix);
+        //
+        //    // ASTM-1 and ASTM-2 - voteshare scoring - nobari
+        //    outfile_prefix = "java_astm1_best" + "_top" + top + "_voteshare_nobari";
+        //    voteshare_path = Constants.Voteshare_Directory + "java" + "/" + "java_vote_share_nobari.csv";
+        //    m.AttentionalSkillTranslation("java", "java_astm1_best", true, top, "Word", "Test", voteshare_path, outfile_prefix);
+        //    outfile_prefix = "java_astm2_best" + "_top" + top + "_voteshare_nobari";
+        //    voteshare_path = Constants.Voteshare_Directory + "java" + "/" + "java_vote_share_nobari.csv";
+        //    m.AttentionalSkillTranslation("java", "java_astm2_best", true, top, "Word", "Test", voteshare_path, outfile_prefix);
+        //    outfile_prefix = "php_astm1_best" + "_top" + top + "_voteshare_nobari";
+        //    voteshare_path = Constants.Voteshare_Directory + "php" + "/" + "php_vote_share_nobari.csv";
+        //    m.AttentionalSkillTranslation("php", "php_astm1_best", true, top, "Word", "Test", voteshare_path, outfile_prefix);
+        //    outfile_prefix = "php_astm2_best" + "_top" + top + "_voteshare_nobari";
+        //    voteshare_path = Constants.Voteshare_Directory + "php" + "/" + "php_vote_share_nobari.csv";
+        //    m.AttentionalSkillTranslation("php", "php_astm2_best", true, top, "Word", "Test", voteshare_path, outfile_prefix);
+        //}
+
+        //for (int wd = 1; wd < 5; wd++) {
+        //    if (wd == 2)
+        //        continue;
+        //    int word_dim = 50 * wd;
+        //    System.out.println(word_dim);
+        //
+        //    // ASTM-1 and ASTM-2 - binary scoring
+        //    outfile_prefix = "java_astm1_wd" + word_dim + "_top" + 10 + "_without_voteshare";
+        //    m.AttentionalSkillTranslation("java", "java_astm1_wd" + word_dim, false, 10, "Word", "Test", "", outfile_prefix);
+        //    outfile_prefix = "java_astm2_wd" + word_dim + "_top" + 10 + "_without_voteshare";
+        //    m.AttentionalSkillTranslation("java", "java_astm2_wd" + word_dim, false, 10, "Word", "Test", "", outfile_prefix);
+        //    outfile_prefix = "php_astm1_wd" + word_dim + "_top" + 10 + "_without_voteshare";
+        //    m.AttentionalSkillTranslation("php", "php_astm1_wd" + word_dim, false, 10, "Word", "Test", "", outfile_prefix);
+        //
+        //    // ASTM-1 and ASTM-2 - voteshare scoring - nobari
+        //    voteshare_path = Constants.Voteshare_Directory + "java" + "/" + "java_vote_share_nobari.csv";
+        //    outfile_prefix = "java_astm1_wd" + word_dim + "_top" + 10 + "_voteshare_nobari";
+        //    m.AttentionalSkillTranslation("java", "java_astm1_wd" + word_dim, true, 10, "Word", "Test", voteshare_path, outfile_prefix);
+        //    outfile_prefix = "java_astm2_wd" + word_dim + "_top" + 10 + "_voteshare_nobari";
+        //    m.AttentionalSkillTranslation("java", "java_astm2_wd" + word_dim, true, 10, "Word", "Test", voteshare_path, outfile_prefix);
+        //
+        //    voteshare_path = Constants.Voteshare_Directory + "php" + "/" + "php_vote_share_nobari.csv";
+        //    outfile_prefix = "php_astm1_wd" + word_dim + "_top" + 10 + "_voteshare_nobari";
+        //    m.AttentionalSkillTranslation("php", "php_astm1_wd" + word_dim, true, 10, "Word", "Test", voteshare_path, outfile_prefix);
+        //}
+
+        //for (int wd = 2; wd < 5; wd++) {
+        //    int word_dim = 50 * wd;
+        //    System.out.println(word_dim);
+        //
+        //    // ASTM-1 and ASTM-2 - binary scoring
+        //    outfile_prefix = "php_astm2_wd" + word_dim + "_top" + 10 + "_without_voteshare";
+        //    m.AttentionalSkillTranslation("php", "php_astm2_wd" + word_dim, false, 10, "Word", "Test", "", outfile_prefix);
+        //
+        //    // ASTM-1 and ASTM-2 - voteshare scoring - nobari
+        //    voteshare_path = Constants.Voteshare_Directory + "php" + "/" + "php_vote_share_nobari.csv";
+        //    outfile_prefix = "php_astm2_wd" + word_dim + "_top" + 10 + "_voteshare_nobari";
+        //    m.AttentionalSkillTranslation("php", "php_astm2_wd" + word_dim, true, 10, "Word", "Test", voteshare_path, outfile_prefix);
+        //}
+
+        //outfile_prefix = "java_astm1_dp05" + "_top" + 10 + "_without_voteshare";
+        //m.AttentionalSkillTranslation("java", "java_astm1_dp05", false, 10, "Word", "Test", "", outfile_prefix);
+        //outfile_prefix = "java_astm1_dp075" + "_top" + 10 + "_without_voteshare";
+        //m.AttentionalSkillTranslation("java", "java_astm1_dp075", false, 10, "Word", "Test", "", outfile_prefix);
+        //outfile_prefix = "java_astm2_dp05" + "_top" + 10 + "_without_voteshare";
+        //m.AttentionalSkillTranslation("java", "java_astm2_dp05", false, 10, "Word", "Test", "", outfile_prefix);
+        //outfile_prefix = "java_astm2_dp1" + "_top" + 10 + "_without_voteshare";
+        //m.AttentionalSkillTranslation("java", "java_astm2_dp1", false, 10, "Word", "Test", "", outfile_prefix);
+        //outfile_prefix = "php_astm1_dp05" + "_top" + 10 + "_without_voteshare";
+        //m.AttentionalSkillTranslation("php", "php_astm1_dp05", false, 10, "Word", "Test", "", outfile_prefix);
+        //outfile_prefix = "php_astm1_dp075" + "_top" + 10 + "_without_voteshare";
+        //m.AttentionalSkillTranslation("php", "php_astm1_dp075", false, 10, "Word", "Test", "", outfile_prefix);
+        //outfile_prefix = "php_astm2_dp05" + "_top" + 10 + "_without_voteshare";
+        //m.AttentionalSkillTranslation("php", "php_astm2_dp05", false, 10, "Word", "Test", "", outfile_prefix);
+        //outfile_prefix = "php_astm2_dp075" + "_top" + 10 + "_without_voteshare";
+        //m.AttentionalSkillTranslation("php", "php_astm2_dp075", false, 10, "Word", "Test", "", outfile_prefix);
+
+        //voteshare_path = Constants.Voteshare_Directory + "java" + "/" + "java_vote_share_nobari.csv";
+        //outfile_prefix = "java_astm1_dp05" + "_top" + 10 + "_voteshare_nobari";
+        //m.AttentionalSkillTranslation("java", "java_astm1_dp05", true, 10, "Word", "Test", voteshare_path, outfile_prefix);
+        //outfile_prefix = "java_astm1_dp075" + "_top" + 10 + "_voteshare_nobari";
+        //m.AttentionalSkillTranslation("java", "java_astm1_dp075", true, 10, "Word", "Test", voteshare_path, outfile_prefix);
+        //outfile_prefix = "java_astm2_dp05" + "_top" + 10 + "_voteshare_nobari";
+        //m.AttentionalSkillTranslation("java", "java_astm2_dp05", true, 10, "Word", "Test", voteshare_path, outfile_prefix);
+        //outfile_prefix = "java_astm2_dp1" + "_top" + 10 + "_voteshare_nobari";
+        //m.AttentionalSkillTranslation("java", "java_astm2_dp1", true, 10, "Word", "Test", voteshare_path, outfile_prefix);
+        //voteshare_path = Constants.Voteshare_Directory + "php" + "/" + "php_vote_share_nobari.csv";
+        //outfile_prefix = "php_astm1_dp05" + "_top" + 10 + "_voteshare_nobari";
+        //m.AttentionalSkillTranslation("php", "php_astm1_dp05", true, 10, "Word", "Test", voteshare_path, outfile_prefix);
+        //outfile_prefix = "php_astm1_dp075" + "_top" + 10 + "_voteshare_nobari";
+        //m.AttentionalSkillTranslation("php", "php_astm1_dp075", true, 10, "Word", "Test", voteshare_path, outfile_prefix);
+        //outfile_prefix = "php_astm2_dp05" + "_top" + 10 + "_voteshare_nobari";
+        //m.AttentionalSkillTranslation("php", "php_astm2_dp05", true, 10, "Word", "Test", voteshare_path, outfile_prefix);
+        //outfile_prefix = "php_astm2_dp075" + "_top" + 10 + "_voteshare_nobari";
+        //m.AttentionalSkillTranslation("php", "php_astm2_dp075", true, 10, "Word", "Test", voteshare_path, outfile_prefix);
 
         Date end = new Date();
         System.out.println(end.getTime() - start.getTime() + " total milliseconds");
