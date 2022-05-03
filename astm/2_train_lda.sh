@@ -45,3 +45,43 @@ cd mallet-2.0.8
 ./bin/mallet train-topics --input ./output/topic-modeling-input-php.mallet --num-topics 200 --random-seed 7 \
 --output-topic-keys ./output/topic-keys-php-200.txt \
 --word-topic-counts-file ./output/word-topic-counts-file-php-200.txt --optimize-interval 20
+
+######################################################################################################################
+
+./bin/mallet import-file --input ../data/so_android.txt --output ./output/topic-modeling-input-android.mallet --keep-sequence --remove-stopwords
+
+./bin/mallet train-topics --input ./output/topic-modeling-input-android.mallet --num-topics 50 --random-seed 7 \
+--output-topic-keys ./output/topic-keys-android-50.txt \
+--word-topic-counts-file ./output/word-topic-counts-file-android-50.txt --optimize-interval 20
+
+./bin/mallet train-topics --input ./output/topic-modeling-input-android.mallet --num-topics 100 --random-seed 7 \
+--output-topic-keys ./output/topic-keys-android-100.txt \
+--word-topic-counts-file ./output/word-topic-counts-file-android-100.txt --optimize-interval 20
+
+./bin/mallet train-topics --input ./output/topic-modeling-input-android.mallet --num-topics 150 --random-seed 7 \
+--output-topic-keys ./output/topic-keys-android-150.txt \
+--word-topic-counts-file ./output/word-topic-counts-file-android-150.txt --optimize-interval 20
+
+./bin/mallet train-topics --input ./output/topic-modeling-input-android.mallet --num-topics 200 --random-seed 7 \
+--output-topic-keys ./output/topic-keys-android-200.txt \
+--word-topic-counts-file ./output/word-topic-counts-file-android-200.txt --optimize-interval 20
+
+#######################################################################################################################
+
+./bin/mallet import-file --input ../data/so_c#.txt --output ./output/topic-modeling-input-c#.mallet --keep-sequence --remove-stopwords
+
+./bin/mallet train-topics --input ./output/topic-modeling-input-c#.mallet --num-topics 50 --random-seed 7 \
+--output-topic-keys ./output/topic-keys-c#-50.txt \
+--word-topic-counts-file ./output/word-topic-counts-file-c#-50.txt --optimize-interval 20
+
+./bin/mallet train-topics --input ./output/topic-modeling-input-c#.mallet --num-topics 100 --random-seed 7 \
+--output-topic-keys ./output/topic-keys-c#-100.txt \
+--word-topic-counts-file ./output/word-topic-counts-file-c#-100.txt --optimize-interval 20
+
+./bin/mallet train-topics --input ./output/topic-modeling-input-c#.mallet --num-topics 150 --random-seed 7 \
+--output-topic-keys ./output/topic-keys-c#-150.txt \
+--word-topic-counts-file ./output/word-topic-counts-file-c#-150.txt --optimize-interval 20
+
+./bin/mallet train-topics --input ./output/topic-modeling-input-c#.mallet --num-topics 200 --random-seed 7 \
+--output-topic-keys ./output/topic-keys-c#-200.txt \
+--word-topic-counts-file ./output/word-topic-counts-file-c#-200.txt --optimize-interval 20

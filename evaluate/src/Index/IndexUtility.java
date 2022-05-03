@@ -56,6 +56,14 @@ public class IndexUtility {
         return query;
     }
 
+    public Query SearchBodyForPhrase(String word) {
+        PhraseQuery query = new PhraseQuery();
+        for (String w : word.trim().split(" ")) {
+            query.add(new Term("Body", w));
+        }
+        return query;
+    }
+
     public Query SearchTitle(String word) {
         Query query = new TermQuery(new Term("Title", word));
         return query;

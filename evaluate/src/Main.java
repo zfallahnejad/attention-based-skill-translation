@@ -242,7 +242,7 @@ public class Main {
             if (!dir.exists())
                 dir.mkdirs();
 
-            b.blendOr(infile, Constants.Results_Directory + attentional_result_dir + "/" + attentional_result_filename, type, dataset, topWords, true, true, true, use_vote_share);// no cluster, without voteshare
+            b.blendOr(infile, Constants.Results_Directory + attentional_result_dir + "/" + attentional_result_filename, type, dataset, topWords, true, true, true, use_vote_share, false);// no cluster, without voteshare
 
             dir = new File(Constants.EvaluationResultsDirectory + attentional_result_dir);
             if (!dir.exists())
@@ -283,7 +283,7 @@ public class Main {
             if (!dir.exists())
                 dir.mkdirs();
 
-            b.blendOr(infile, Constants.Results_Directory + attentional_result_dir + "/" + attentional_result_filename, type, dataset, topWords, true, true, true, use_vote_share);// no cluster, without voteshare
+            b.blendOr(infile, Constants.Results_Directory + attentional_result_dir + "/" + attentional_result_filename, type, dataset, topWords, true, true, true, use_vote_share, false);// no cluster, without voteshare
 
             dir = new File(Constants.EvaluationResultsDirectory + attentional_result_dir);
             if (!dir.exists())

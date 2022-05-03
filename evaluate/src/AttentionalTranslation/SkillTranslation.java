@@ -172,6 +172,58 @@ public class SkillTranslation {
         return tags;
     }
 
+    public HashMap<String, ArrayList<ProbTranslate>> loadMultipleTranslations(ArrayList<String> infilePathList, String TranslationType, String Dataset, int countWords) {
+        HashMap<String, ArrayList<ProbTranslate>> tags = new HashMap<>();
+        try {
+            for (String infilePath : infilePathList) {
+                BufferedReader reader = new BufferedReader(new FileReader(infilePath));
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    String[] parts = line.split(", Dataset=");
+                    String type = parts[0].replace("Type=", "");
+                    if (!type.equalsIgnoreCase(TranslationType)) {
+                        continue;
+                    }
+
+                    parts = parts[1].split(", Label=");
+                    String data_part = parts[0];
+                    if (!data_part.equalsIgnoreCase(Dataset))
+                        continue;
+
+                    parts = parts[1].split(", Translations=");
+                    String tag = parts[0];
+                    String translations = parts[1].replace("[(", "").replace(")]", "");
+                    //if (tag.equals(mainTag))
+                    //    continue;
+
+                    ArrayList<ProbTranslate> e = new ArrayList<>();
+                    String[] tr_score = translations.split("\\), \\(");
+                    if (tr_score.length > 1) {
+                        for (int i = 0; i < countWords; i++) {
+                            String translate = tr_score[i].substring(1, tr_score[i].lastIndexOf(',') - 1);
+                            String score = tr_score[i].substring(tr_score[i].lastIndexOf(',') + 2);
+                            e.add(new ProbTranslate(translate, 1));
+                            //e.add(new ProbTranslate(translate, score));
+                        }
+                    }
+                    //else {
+                    //    // self translation if you don't have anny translation
+                    //    e.add(new ProbTranslate(tag, 1));
+                    //    e2.add(new ProbTranslate(tag, 1));
+                    //}
+                    if (tags.containsKey(tag)){
+                        tags.get(tag).addAll(e);
+                    } else{
+                        tags.put(tag, e);
+                    }
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return tags;
+    }
+
     public HashMap<String, ArrayList<ProbTranslate>> loadTranslations_neshati(String infilePath, int countWords) {
         HashMap<String, ArrayList<ProbTranslate>> tags = new HashMap<>();
         try {
@@ -208,9 +260,9 @@ public class SkillTranslation {
         return tags;
     }
 
-    public void getUserTranslationScore(String tag, ArrayList<ProbTranslate> translations, boolean tagged, boolean selfTranslate, boolean answerOnly, boolean useVoteShare, String outfile) {
+    public void getUserTranslationScore(String tag, ArrayList<ProbTranslate> translations, boolean tagged, boolean selfTranslate, boolean answerOnly, boolean useVoteShare, String outfile, boolean have_phrase_translation) {
         // TODO why N=50000?
-        HashMap<Integer, Double> UserScores = getTransaltionScoreOr(50000, translations, tag, tagged, selfTranslate, answerOnly, useVoteShare);
+        HashMap<Integer, Double> UserScores = getTransaltionScoreOr(50000, translations, tag, tagged, selfTranslate, answerOnly, useVoteShare, have_phrase_translation);
 
         ValueComparator bvc = new ValueComparator(UserScores);
         TreeMap<Integer, Double> sorted_map = new TreeMap<Integer, Double>(bvc);
@@ -241,7 +293,7 @@ public class SkillTranslation {
         return users;
     }
 
-    public void blendOr(String infilePath, String outfilePath, String TranslationType, String Dataset, int countWords, boolean tagged, boolean selfTranslate, boolean answerOnly, boolean useVoteShare) {
+    public void blendOr(String infilePath, String outfilePath, String TranslationType, String Dataset, int countWords, boolean tagged, boolean selfTranslate, boolean answerOnly, boolean useVoteShare, boolean have_phrase_translation) {
         HashMap<String, ArrayList<ProbTranslate>> tags = loadTranslations(infilePath, TranslationType, Dataset, countWords);
 
         for (String tag : tags.keySet()) {
@@ -257,7 +309,27 @@ public class SkillTranslation {
                 }
                 continue;
             }
-            getUserTranslationScore(tag, trans, tagged, selfTranslate, answerOnly, useVoteShare, output_file);
+            getUserTranslationScore(tag, trans, tagged, selfTranslate, answerOnly, useVoteShare, output_file, have_phrase_translation);
+        }
+    }
+
+    public void blendOrMultiple(ArrayList<String> infilePathList, String outfilePath, String TranslationType, String Dataset, int countWords, boolean tagged, boolean selfTranslate, boolean answerOnly, boolean useVoteShare, boolean have_phrase_translation) {
+        HashMap<String, ArrayList<ProbTranslate>> tags = loadMultipleTranslations(infilePathList, TranslationType, Dataset, countWords);
+
+        for (String tag : tags.keySet()) {
+            System.out.println(tag);
+            String output_file = outfilePath + "_" + tag + ".txt";
+            ArrayList<ProbTranslate> trans = tags.get(tag);
+            if (trans.isEmpty()) {
+                try {
+                    PrintWriter out = new PrintWriter(output_file);
+                    out.close();
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+                continue;
+            }
+            getUserTranslationScore(tag, trans, tagged, selfTranslate, answerOnly, useVoteShare, output_file, have_phrase_translation);
         }
     }
 
@@ -322,7 +394,7 @@ public class SkillTranslation {
         return res;
     }
 
-    public HashMap<Integer, Double> getTransaltionScoreOr(Integer N, ArrayList<ProbTranslate> trans, String tag, boolean isTaged, boolean selfTranslate, boolean answerOnly, boolean useVoteShare) // throws IOException, ParseException
+    public HashMap<Integer, Double> getTransaltionScoreOr(Integer N, ArrayList<ProbTranslate> trans, String tag, boolean isTaged, boolean selfTranslate, boolean answerOnly, boolean useVoteShare, boolean phrase_translation) // throws IOException, ParseException
     {
         if (N == null) {
             N = 10000;
@@ -331,9 +403,17 @@ public class SkillTranslation {
         Query q = null;
         for (ProbTranslate tran : trans) {
             if (q == null) {
-                q = u.SearchBody(tran.getWord());
+                if (phrase_translation) {
+                    q = u.SearchBodyForPhrase(tran.getWord());
+                } else {
+                    q = u.SearchBody(tran.getWord());
+                }
             } else {
-                q = u.BooleanQueryOr(q, u.SearchBody(tran.getWord()));
+                if (phrase_translation) {
+                    q = u.BooleanQueryOr(q, u.SearchBodyForPhrase(tran.getWord()));
+                } else {
+                    q = u.BooleanQueryOr(q, u.SearchBody(tran.getWord()));
+                }
             }
         }
         if (answerOnly) {

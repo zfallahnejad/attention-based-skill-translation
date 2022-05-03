@@ -75,6 +75,14 @@ python3 3_build_word_topic_vectors.py --tag php --embed_size 50
 python3 3_build_word_topic_vectors.py --tag php --embed_size 100
 python3 3_build_word_topic_vectors.py --tag php --embed_size 150
 python3 3_build_word_topic_vectors.py --tag php --embed_size 200
+python3 3_build_word_topic_vectors.py --tag android --embed_size 50
+python3 3_build_word_topic_vectors.py --tag android --embed_size 100
+python3 3_build_word_topic_vectors.py --tag android --embed_size 150
+python3 3_build_word_topic_vectors.py --tag android --embed_size 200
+python3 3_build_word_topic_vectors.py --tag c# --embed_size 50
+python3 3_build_word_topic_vectors.py --tag c# --embed_size 100
+python3 3_build_word_topic_vectors.py --tag c# --embed_size 150
+python3 3_build_word_topic_vectors.py --tag c# --embed_size 200
 ```
 After training word vectors, I ran `test_so_wordvectors.py` script to know some statistics about document length.
 ```

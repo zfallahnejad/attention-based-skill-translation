@@ -88,8 +88,10 @@ public class Constants {
 
     public static final String Results_Directory = "./Results/";
     public static final String EvaluationResultsDirectory = "./EvaluationResults/";
+    public static final String Results2_Directory = "./Results2/";
+    public static final String EvaluationResults2Directory = "./EvaluationResults2/";
 
-    public static final String JavaAttentionalTranslation_Directory = "./Results/JavaAttentionalTranslations/";
-    public static final String PhpAttentionalTranslation_Directory = "./Results/PhpAttentionalTranslations/";
+    public static final String JavaAttentionalTranslation_Directory = "./Translations/JavaAttentionalTranslations/";
+    public static final String PhpAttentionalTranslation_Directory = "./Translations/PhpAttentionalTranslations/";
     public static final String Voteshare_Directory = "./VoteShare/";
 }
