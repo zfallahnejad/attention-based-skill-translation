@@ -39,10 +39,14 @@ public class Main {
         //m.AttentionalSkillTranslation("java", "java_astm1_best", false, 10, "Word", "Test", "", outfile_prefix);
         //outfile_prefix = "java_astm2_best" + "_top" + 10 + "_without_voteshare";
         //m.AttentionalSkillTranslation("java", "java_astm2_best", false, 10, "Word", "Test", "", outfile_prefix);
+        outfile_prefix = "java_sastm_best" + "_top" + 10 + "_without_voteshare";
+        m.AttentionalSkillTranslation("java", "java_sastm_best", false, 10, "Word", "Test", "", outfile_prefix);
         //outfile_prefix = "php_astm1_best" + "_top" + 10 + "_without_voteshare";
         //m.AttentionalSkillTranslation("php", "php_astm1_best", false, 10, "Word", "Test", "", outfile_prefix);
         //outfile_prefix = "php_astm2_best" + "_top" + 10 + "_without_voteshare";
         //m.AttentionalSkillTranslation("php", "php_astm2_best", false, 10, "Word", "Test", "", outfile_prefix);
+        outfile_prefix = "php_sastm_best" + "_top" + 10 + "_without_voteshare";
+        m.AttentionalSkillTranslation("php", "php_sastm_best", false, 10, "Word", "Test", "", outfile_prefix);
 
         // ASTM-1 and ASTM-2 - voteshare scoring - nobari
         //outfile_prefix = "java_astm1_best" + "_top" + 10 + "_voteshare_nobari";
@@ -51,12 +55,18 @@ public class Main {
         //outfile_prefix = "java_astm2_best" + "_top" + 10 + "_voteshare_nobari";
         //voteshare_path = Constants.Voteshare_Directory + "java" + "/" + "java_vote_share_nobari.csv";
         //m.AttentionalSkillTranslation("java", "java_astm2_best", true, 10, "Word", "Test", voteshare_path, outfile_prefix);
+        outfile_prefix = "java_sastm_best" + "_top" + 10 + "_voteshare_nobari";
+        voteshare_path = Constants.Voteshare_Directory + "java" + "/" + "java_vote_share_nobari.csv";
+        m.AttentionalSkillTranslation("java", "java_sastm_best", true, 10, "Word", "Test", voteshare_path, outfile_prefix);
         //outfile_prefix = "php_astm1_best" + "_top" + 10 + "_voteshare_nobari";
         //voteshare_path = Constants.Voteshare_Directory + "php" + "/" + "php_vote_share_nobari.csv";
         //m.AttentionalSkillTranslation("php", "php_astm1_best", true, 10, "Word", "Test", voteshare_path, outfile_prefix);
         //outfile_prefix = "php_astm2_best" + "_top" + 10 + "_voteshare_nobari";
         //voteshare_path = Constants.Voteshare_Directory + "php" + "/" + "php_vote_share_nobari.csv";
         //m.AttentionalSkillTranslation("php", "php_astm2_best", true, 10, "Word", "Test", voteshare_path, outfile_prefix);
+        outfile_prefix = "php_sastm_best" + "_top" + 10 + "_voteshare_nobari";
+        voteshare_path = Constants.Voteshare_Directory + "php" + "/" + "php_vote_share_nobari.csv";
+        m.AttentionalSkillTranslation("php", "php_sastm_best", true, 10, "Word", "Test", voteshare_path, outfile_prefix);
 
         //for (int v = 1; v < 7; v++) {
         //    // ASTM-1 and ASTM-2 - voteshare scoring - my voteshare version v
