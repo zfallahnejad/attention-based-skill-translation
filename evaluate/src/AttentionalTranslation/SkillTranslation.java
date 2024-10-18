@@ -297,7 +297,7 @@ public class SkillTranslation {
         HashMap<String, ArrayList<ProbTranslate>> tags = loadTranslations(infilePath, TranslationType, Dataset, countWords);
 
         for (String tag : tags.keySet()) {
-            System.out.println(tag);
+            System.out.println("tag: " + tag);
             String output_file = outfilePath + "_" + tag + ".txt";
             ArrayList<ProbTranslate> trans = tags.get(tag);
             if (trans.isEmpty()) {

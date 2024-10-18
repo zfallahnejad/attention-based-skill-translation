@@ -374,6 +374,9 @@ public class IndexUtility {
 
     // just for test!
     public static void main(String args[]) {
+        //IndexUtility u = new IndexUtility("./Indexes/UsageIndex2_StandardAnalyzer");
+        //u.getPost(u.SearchOwnerUserId(66));
+
         //IndexUtility u = new IndexUtility(Constants.JavaIndexDirectory2);
         //u.getPost(u.SearchOwnerUserId(330086));
         //HashSet<Integer> posts = u.getPostIDs(u.BooleanQueryAnd(u.SearchBody("httpclient"), u.SearchTag("android")));

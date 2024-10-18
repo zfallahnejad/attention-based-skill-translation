@@ -233,6 +233,7 @@ public class Main {
             System.out.println(infile);
             System.out.println("Translation Type: " + type);
             System.out.println("Dataset Part: " + dataset);
+            System.out.println("Use vote_share: " + use_vote_share);
 
             String attentional_result_dir = outfile_prefix + "_" + IndexName;
             String attentional_result_filename = outfile_prefix + "_type" + type + "_dataset" + dataset;
@@ -274,6 +275,7 @@ public class Main {
             System.out.println(infile);
             System.out.println("Translation Type: " + type);
             System.out.println("Dataset Part: " + dataset);
+            System.out.println("Use vote_share: " + use_vote_share);
 
             String attentional_result_dir = outfile_prefix + "_" + IndexName;
             String attentional_result_filename = outfile_prefix + "_type" + type + "_dataset" + dataset;
